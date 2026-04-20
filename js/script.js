@@ -143,13 +143,7 @@ window.addEventListener('scroll', () => {
 });
 
 // ===== Parallax Effect for Hero Section =====
-window.addEventListener('scroll', () => {
-    const hero = document.querySelector('.hero');
-    const scrolled = window.pageYOffset;
-    if (hero) {
-        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-    }
-});
+// Disabled to avoid exposing white gaps during scroll on the homepage layout.
 
 // ===== Add hover effect to project cards =====
 document.querySelectorAll('.project-card').forEach(card => {

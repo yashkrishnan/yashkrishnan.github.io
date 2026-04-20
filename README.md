@@ -61,12 +61,12 @@ cd yashkrishnan.github.io
 ```bash
 open index.html
 # or
-python -m http.server 8000  # For local development server
+python -m http.server 8000
 ```
 
 ### Local Development
 
-For local development with live reload, you can use any static file server:
+For local development with a static file server:
 
 ```bash
 # Using Python
@@ -80,6 +80,51 @@ php -S localhost:8000
 ```
 
 Then visit `http://localhost:8000` in your browser.
+
+## 🌐 Publish to GitHub Pages
+
+This repository is ready to be published as a GitHub Pages site.
+
+### Recommended repository setup
+
+Use the repository name `yashkrishnan.github.io`. With that name, GitHub will publish the site directly at `https://yashkrishnan.github.io/`.
+
+### Files required for publishing
+
+- Keep `index.html` at the repository root
+- Keep all linked assets in tracked folders such as `css/`, `js/`, and `images/`
+- Commit the `files/` directory too if you want resume downloads to work on the live site
+- Keep the existing `CNAME` file only if you are using a custom domain
+
+### Publish steps
+
+1. Push this project to GitHub:
+```bash
+git init
+git add .
+git commit -m "Initial GitHub Pages site"
+git branch -M main
+git remote add origin git@github.com:yashkrishnan/yashkrishnan.github.io.git
+git push -u origin main
+```
+
+2. In GitHub, open **Settings → Pages**
+
+3. Under **Build and deployment**:
+   - **Source**: `Deploy from a branch`
+   - **Branch**: `main`
+   - **Folder**: `/ (root)`
+
+4. Save the settings and wait a minute for deployment
+
+5. Open the published site:
+```text
+https://yashkrishnan.github.io/
+```
+
+### Important note about downloads
+
+Previously, `.gitignore` excluded the `files/` directory. That would prevent downloadable assets like your resume PDF from being published. This has been fixed, so the `files/` directory can now be committed and deployed.
 
 ## 📄 Pages Overview
 
@@ -180,9 +225,9 @@ This is a personal portfolio website. For suggestions or feedback, please reach 
 
 ## 🔗 Links
 
-- **Website**: [yashkrishnan.github.io](https://yashkrishnan.github.io)
+- **Website**: [yashkrishnan.github.io](https://yashkrishnan.github.io/)
 - **LinkedIn**: [linkedin.com/in/yashwanth-krishnan](https://www.linkedin.com/in/yashwanth-krishnan/)
-- **GitHub**: [github.com/yashwanthkrishnan](https://github.com/yashwanthkrishnan)
+- **GitHub**: [github.com/yashkrishnan/yashkrishnan.github.io](https://github.com/yashkrishnan/yashkrishnan.github.io)
 
 ---
 

@@ -1,33 +1,40 @@
+const currentYear = new Date().getFullYear();
+document.querySelectorAll('[data-current-year]').forEach((element) => {
+    element.textContent = currentYear;
+});
+
 // ===== Mobile Navigation Toggle =====
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    
-    // Animate hamburger icon
-    const spans = hamburger.querySelectorAll('span');
-    spans[0].style.transform = navLinks.classList.contains('active') 
-        ? 'rotate(45deg) translate(5px, 5px)' 
-        : 'rotate(0) translate(0, 0)';
-    spans[1].style.opacity = navLinks.classList.contains('active') ? '0' : '1';
-    spans[2].style.transform = navLinks.classList.contains('active') 
-        ? 'rotate(-45deg) translate(7px, -6px)' 
-        : 'rotate(0) translate(0, 0)';
-});
-
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
+if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
         
-        // Reset hamburger icon
+        // Animate hamburger icon
         const spans = hamburger.querySelectorAll('span');
-        spans[0].style.transform = 'rotate(0) translate(0, 0)';
-        spans[1].style.opacity = '1';
-        spans[2].style.transform = 'rotate(0) translate(0, 0)';
+        spans[0].style.transform = navLinks.classList.contains('active')
+            ? 'rotate(45deg) translate(5px, 5px)'
+            : 'rotate(0) translate(0, 0)';
+        spans[1].style.opacity = navLinks.classList.contains('active') ? '0' : '1';
+        spans[2].style.transform = navLinks.classList.contains('active')
+            ? 'rotate(-45deg) translate(7px, -6px)'
+            : 'rotate(0) translate(0, 0)';
     });
-});
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            
+            // Reset hamburger icon
+            const spans = hamburger.querySelectorAll('span');
+            spans[0].style.transform = 'rotate(0) translate(0, 0)';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'rotate(0) translate(0, 0)';
+        });
+    });
+}
 
 // ===== Smooth Scrolling for Navigation Links =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -81,27 +88,29 @@ document.querySelectorAll('section, .skill-card, .project-card, .stat').forEach(
 // ===== Contact Form Handling =====
 const contactForm = document.querySelector('.contact-form');
 
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        subject: document.getElementById('subject').value,
-        message: document.getElementById('message').value
-    };
-    
-    // Here you would typically send the data to a server
-    // For now, we'll just show a success message
-    console.log('Form submitted:', formData);
-    
-    // Show success message
-    alert('Thank you for your message! I will get back to you soon.');
-    
-    // Reset form
-    contactForm.reset();
-});
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            subject: document.getElementById('subject').value,
+            message: document.getElementById('message').value
+        };
+        
+        // Here you would typically send the data to a server
+        // For now, we'll just show a success message
+        console.log('Form submitted:', formData);
+        
+        // Show success message
+        alert('Thank you for your message! I will get back to you soon.');
+        
+        // Reset form
+        contactForm.reset();
+    });
+}
 
 // ===== Typing Effect for Hero Title =====
 // Disabled to preserve HTML formatting in the title

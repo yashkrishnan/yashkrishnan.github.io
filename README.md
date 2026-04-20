@@ -1,280 +1,189 @@
-# Personal Website
+# Yashwanth Krishnan - Personal Website
 
-A modern, responsive personal portfolio website built with HTML5, CSS3, and vanilla JavaScript.
+A modern, multi-page personal portfolio website built with IBM Carbon Design System, showcasing professional experience, technical skills, and projects.
 
 ## 🌟 Features
 
-- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
-- **Modern UI/UX**: Clean and professional design with smooth animations
-- **Interactive Elements**: Engaging hover effects and scroll animations
-- **Mobile Navigation**: Hamburger menu for mobile devices
-- **Smooth Scrolling**: Seamless navigation between sections
-- **Contact Form**: Functional contact form (ready for backend integration)
-- **Performance Optimized**: Fast loading and smooth animations
+- **Multi-page Architecture**: Separate pages for different sections (About, Experience, Skills, Projects, Education, Downloads, Contact)
+- **IBM Carbon Design System**: Professional design language with consistent theming
+- **Responsive Design**: Mobile-friendly navigation and layouts
+- **Interactive Elements**: Hover effects, smooth transitions, and dynamic content
+- **Downloadable Resources**: Resume and portfolio PDF downloads
+- **Contact Form**: Integrated contact form with social links
 
 ## 📁 Project Structure
 
 ```
 personal-website/
-├── index.html          # Main HTML file
+├── index.html          # Landing page with hero section
+├── about.html          # Professional summary and background
+├── experience.html     # Work history (13+ years)
+├── skills.html         # Technical skills and expertise
+├── projects.html       # 10 technical projects
+├── education.html      # Academic background and certifications
+├── downloads.html      # Resume and portfolio downloads
+├── contact.html        # Contact form and information
 ├── css/
-│   └── style.css      # Stylesheet with modern CSS
+│   └── style.css      # IBM Carbon Design System styles
 ├── js/
-│   └── script.js      # JavaScript for interactivity
-├── images/            # Directory for images (add your own)
-└── README.md          # This file
+│   └── script.js      # Interactive functionality
+├── images/            # Image assets
+├── files/             # Downloadable documents (excluded from git)
+├── .gitignore         # Git ignore rules
+└── README.md          # Project documentation
 ```
+
+## 🎨 Design System
+
+Built with **IBM Carbon Design System** featuring:
+- IBM Plex Sans font family
+- Carbon color palette (#0f62fe primary blue)
+- Flat design principles
+- Consistent spacing and typography
+- Professional card-based layouts
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
 - A modern web browser (Chrome, Firefox, Safari, Edge)
-- A text editor (VS Code, Sublime Text, etc.) for customization
-- Optional: A local web server for testing
+- No build tools or dependencies required
 
 ### Installation
 
-1. **Download or Clone the Project**
-   ```bash
-   # If you have git installed
-   git clone <your-repo-url>
-   
-   # Or simply download the ZIP file
-   ```
-
-2. **Navigate to the Project Directory**
-   ```bash
-   cd personal-website
-   ```
-
-3. **Open in Browser**
-   - Simply double-click `index.html` to open in your default browser
-   - Or right-click and choose "Open with" your preferred browser
-
-### Using a Local Server (Recommended)
-
-For the best experience, use a local web server:
-
-**Option 1: Using Python**
+1. Clone the repository:
 ```bash
-# Python 3
+git clone git@github.com:yashkrishnan/yashkrishnan.github.io.git
+cd yashkrishnan.github.io
+```
+
+2. Open `index.html` in your browser:
+```bash
+open index.html
+# or
+python -m http.server 8000  # For local development server
+```
+
+### Local Development
+
+For local development with live reload, you can use any static file server:
+
+```bash
+# Using Python
 python -m http.server 8000
 
-# Python 2
-python -m SimpleHTTPServer 8000
+# Using Node.js http-server
+npx http-server
+
+# Using PHP
+php -S localhost:8000
 ```
-
-**Option 2: Using Node.js (http-server)**
-```bash
-# Install http-server globally
-npm install -g http-server
-
-# Run the server
-http-server -p 8000
-```
-
-**Option 3: Using VS Code**
-- Install the "Live Server" extension
-- Right-click on `index.html` and select "Open with Live Server"
 
 Then visit `http://localhost:8000` in your browser.
 
-## 🎨 Customization
+## 📄 Pages Overview
 
-### 1. Personal Information
+### Home (index.html)
+- Hero section with professional introduction
+- Quick stats (13+ years experience, 10+ technologies, 5+ projects)
+- "What I Do" highlights
+- Current role at IBM WatsonX.Data
+- Quick navigation links
 
-Edit `index.html` to update:
-- Your name in the hero section
-- About me text
-- Skills and technologies
-- Project details
-- Contact information
-- Social media links
+### About (about.html)
+- Professional summary
+- Technical expertise
+- Career highlights
+- Statistics and achievements
 
-### 2. Colors and Styling
+### Experience (experience.html)
+- Complete work history (5 positions)
+- IBM WatsonX.Data (Dec 2023 - Present)
+- Litmus7 (Aug 2019 - Nov 2023)
+- LuLu International Exchange (Jun 2018 - Aug 2019)
+- C-DIT (Nov 2013 - Apr 2015)
+- Solutions Infotech (Feb 2013 - Jan 2015)
 
-Edit `css/style.css` to customize:
-- Color scheme (CSS variables at the top of the file)
-- Fonts and typography
-- Spacing and layout
-- Animations and transitions
+### Skills (skills.html)
+- Java/SpringBoot
+- Python
+- JavaScript/React
+- DevOps & Cloud
+- Databases
+- Cloud Platforms
 
-**CSS Variables:**
-```css
-:root {
-    --primary-color: #6366f1;      /* Main brand color */
-    --secondary-color: #8b5cf6;    /* Secondary brand color */
-    --text-color: #1f2937;         /* Main text color */
-    --text-light: #6b7280;         /* Light text color */
-    --bg-color: #ffffff;           /* Background color */
-    --bg-light: #f9fafb;           /* Light background */
-    --bg-dark: #111827;            /* Dark background */
-}
-```
+### Projects (projects.html)
+- IBM WatsonX Data (Featured)
+- Document Extraction using LLMs
+- SnapRapid Platform
+- CareerLabs
+- SafeGuard
+- Semantic Ontologies
+- Instio
+- E-Commerce Platform
+- LuLu Money
+- StatFuel
 
-### 3. Adding Images
+### Education (education.html)
+- MCA from Cochin University (2010-2013)
+- MongoDB Certification
+- NIELIT Certification
+- Teaching experience at C-DIT
 
-1. Add your images to the `images/` directory
-2. Update the image references in `index.html`
-3. For project images, replace the placeholder divs with actual images:
+### Downloads (downloads.html)
+- ATS-optimized resume
+- Comprehensive portfolio
+- Direct download links
 
-```html
-<!-- Replace this: -->
-<div class="project-placeholder">Project 1</div>
+### Contact (contact.html)
+- Contact form
+- Email: yashwanthkrishnan@gmail.com
+- Phone: +91 9895742428
+- Location: Bangalore, India
+- Social links (LinkedIn, GitHub)
 
-<!-- With this: -->
-<img src="images/project1.jpg" alt="Project 1">
-```
+## 🛠️ Technologies Used
 
-### 4. Adding More Sections
+- **HTML5**: Semantic markup
+- **CSS3**: IBM Carbon Design System styling
+- **JavaScript**: Interactive functionality
+- **Font Awesome**: Icons
+- **IBM Plex Sans**: Typography
+- **Git**: Version control
 
-To add a new section:
+## 📱 Responsive Design
 
-1. Add the HTML in `index.html`:
-```html
-<section id="new-section" class="new-section">
-    <div class="container">
-        <h2 class="section-title">New Section</h2>
-        <!-- Your content here -->
-    </div>
-</section>
-```
+The website is fully responsive with:
+- Mobile-friendly navigation (hamburger menu)
+- Flexible grid layouts
+- Optimized images and content
+- Touch-friendly interactive elements
 
-2. Add styling in `css/style.css`:
-```css
-.new-section {
-    padding: 80px 0;
-    /* Your styles here */
-}
-```
+## 🎯 Key Highlights
 
-3. Add to navigation in `index.html`:
-```html
-<li><a href="#new-section">New Section</a></li>
-```
+- **13+ years** of professional experience
+- **Team Lead** at IBM WatsonX.Data
+- **10+ technologies** mastered
+- **5+ major projects** delivered
+- **Full-stack expertise** in Java, Python, JavaScript
+- **Cloud & DevOps** proficiency
 
-## 📱 Sections Overview
+## 📝 License
 
-### 1. Navigation Bar
-- Fixed navigation with smooth scrolling
-- Responsive hamburger menu for mobile
-- Active link highlighting
-
-### 2. Hero Section
-- Eye-catching gradient background
-- Animated typing effect for the title
-- Call-to-action buttons
-
-### 3. About Section
-- Personal introduction
-- Statistics/achievements counter
-- Animated on scroll
-
-### 4. Skills Section
-- Grid layout of skills
-- Icon-based cards
-- Hover animations
-
-### 5. Projects Section
-- Portfolio showcase
-- Project cards with descriptions
-- Technology tags
-- Links to live projects
-
-### 6. Contact Section
-- Contact information
-- Social media links
-- Contact form (ready for backend)
-
-### 7. Footer
-- Copyright information
-- Additional links (optional)
-
-## 🔧 JavaScript Features
-
-The `js/script.js` file includes:
-
-- **Mobile Navigation**: Toggle menu functionality
-- **Smooth Scrolling**: Animated scroll to sections
-- **Scroll Animations**: Reveal elements on scroll
-- **Form Handling**: Contact form submission
-- **Typing Effect**: Animated hero title
-- **Active Link Highlighting**: Shows current section
-- **Parallax Effect**: Hero section parallax
-- **Counter Animation**: Animated statistics
-- **Hover Effects**: Interactive card animations
-
-## 🌐 Deployment
-
-### GitHub Pages
-
-1. Create a GitHub repository
-2. Push your code to the repository
-3. Go to Settings > Pages
-4. Select the main branch as source
-5. Your site will be live at `https://yourusername.github.io/repository-name`
-
-### Netlify
-
-1. Sign up at [Netlify](https://www.netlify.com)
-2. Drag and drop your project folder
-3. Your site will be live instantly with a custom URL
-
-### Vercel
-
-1. Sign up at [Vercel](https://vercel.com)
-2. Import your GitHub repository
-3. Deploy with one click
-
-## 📝 To-Do / Customization Checklist
-
-- [ ] Replace "Your Name" with your actual name
-- [ ] Update the about section with your information
-- [ ] Add your actual skills and technologies
-- [ ] Replace project placeholders with real projects
-- [ ] Add project images to the images folder
-- [ ] Update contact information (email, phone, location)
-- [ ] Add your social media links
-- [ ] Customize colors to match your brand
-- [ ] Add a favicon (icon in browser tab)
-- [ ] Test on different devices and browsers
-- [ ] Optimize images for web
-- [ ] Add meta tags for SEO
-- [ ] Set up form backend (optional)
-
-## 🎯 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
+© 2024 Yashwanth Krishnan. All rights reserved.
 
 ## 🤝 Contributing
 
-Feel free to fork this project and customize it for your own use!
+This is a personal portfolio website. For suggestions or feedback, please reach out via:
+- Email: yashwanthkrishnan@gmail.com
+- LinkedIn: [linkedin.com/in/yashwanth-krishnan](https://www.linkedin.com/in/yashwanth-krishnan/)
 
-## 💡 Tips
+## 🔗 Links
 
-1. **Images**: Use optimized images (WebP format recommended)
-2. **Performance**: Keep file sizes small for faster loading
-3. **Accessibility**: Ensure good color contrast and add alt text to images
-4. **SEO**: Add meta descriptions and proper heading hierarchy
-5. **Testing**: Test on multiple devices and browsers before deploying
-
-## 📞 Support
-
-If you have any questions or need help customizing your website, feel free to:
-- Open an issue on GitHub
-- Reach out via the contact form on the website
+- **Website**: [yashkrishnan.github.io](https://yashkrishnan.github.io)
+- **LinkedIn**: [linkedin.com/in/yashwanth-krishnan](https://www.linkedin.com/in/yashwanth-krishnan/)
+- **GitHub**: [github.com/yashwanthkrishnan](https://github.com/yashwanthkrishnan)
 
 ---
 
-**Happy Coding! 🚀**
-
-Made with ❤️ and passion for web development
+Built with ❤️ and passion for clean code and great design.

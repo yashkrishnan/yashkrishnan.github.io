@@ -229,5 +229,3 @@ window.addEventListener('load', () => {
 });
 
 console.log('Personal website loaded successfully! 🚀');
-
-// Made with Bob

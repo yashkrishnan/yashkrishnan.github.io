@@ -3,6 +3,14 @@ document.querySelectorAll('[data-current-year]').forEach((element) => {
     element.textContent = currentYear;
 });
 
+// ===== Calculate Years of Experience =====
+const FIRST_EXPERIENCE_YEAR = 2013; // February 2013 - Solutions Infotech
+const yearsOfExperience = currentYear - FIRST_EXPERIENCE_YEAR;
+
+document.querySelectorAll('[data-years-experience]').forEach((element) => {
+    element.textContent = yearsOfExperience;
+});
+
 // ===== Mobile Navigation Toggle =====
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');

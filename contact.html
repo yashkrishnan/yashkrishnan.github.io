@@ -135,8 +135,22 @@
                     
                     <!-- Stack Overflow Flair -->
                     <div id="stackoverflow-flair" style="margin-bottom: 20px; min-height: 70px; display: flex; align-items: center; justify-content: center;">
-                        <a id="stackoverflow-flair-link" href="https://stackoverflow.com/users/2604735/yash-krishnan" target="_blank">
-                            <img src="https://stackoverflow.com/users/flair/2604735.png?theme=clean"
+                        <!-- Placeholder badge (shown while flair loads) -->
+                        <a id="stackoverflow-placeholder" href="https://stackoverflow.com/users/2604735/yash-krishnan" target="_blank" style="text-decoration: none;">
+                            <div style="background: white; border: 1px solid #e0e0e0; border-radius: 6px; padding: 12px 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: inline-flex; align-items: center; gap: 12px; min-width: 200px; height: 58px;">
+                                <div style="font-size: 2rem; color: #F48024;">
+                                    <i class="fab fa-stack-overflow"></i>
+                                </div>
+                                <div style="text-align: left;">
+                                    <div style="font-weight: 600; color: #000; font-size: 0.9rem;">Yash Krishnan</div>
+                                    <div style="font-size: 0.75rem; color: #666;">Stack Overflow</div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Actual Stack Overflow flair (hidden initially) -->
+                        <a id="stackoverflow-flair-link" href="https://stackoverflow.com/users/2604735/yash-krishnan" target="_blank" style="display: none;">
+                            <img id="stackoverflow-flair-img"
+                                 src="https://stackoverflow.com/users/flair/2604735.png?theme=clean"
                                  width="208"
                                  height="58"
                                  alt="Stack Overflow profile"
@@ -228,6 +242,23 @@
         document.querySelectorAll('.contact-info-card').forEach(card => {
             card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
         });
+
+        // Handle Stack Overflow flair loading
+        const soFlairImg = document.getElementById('stackoverflow-flair-img');
+        const soPlaceholder = document.getElementById('stackoverflow-placeholder');
+        
+        if (soFlairImg && soPlaceholder) {
+            soFlairImg.addEventListener('load', function() {
+                // Hide placeholder and show actual flair
+                soPlaceholder.style.display = 'none';
+                soFlairImg.style.display = 'block';
+            });
+            
+            soFlairImg.addEventListener('error', function() {
+                // If flair fails to load, keep showing placeholder
+                console.log('Stack Overflow flair failed to load, showing placeholder');
+            });
+        }
     </script>
 </body>
 </html>

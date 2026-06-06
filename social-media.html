@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Social Media Hub - Yashwanth Krishnan">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Social Media Hub - Yashwanth Krishnan</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <!-- IBM Plex Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .social-hero {
+            padding: 120px 0 60px;
+            background: linear-gradient(135deg, #0f62fe 0%, #0353e9 100%);
+            color: white;
+            text-align: center;
+        }
+        .social-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .social-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 40px 0;
+            flex-wrap: wrap;
+        }
+        .filter-tab {
+            padding: 12px 24px;
+            background: white;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .filter-tab:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+        .filter-tab.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        .social-post {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .social-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(15, 98, 254, 0.2);
+        }
+        .post-header {
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .platform-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: white;
+        }
+        .platform-icon.instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+        .platform-icon.linkedin { background: #0077b5; }
+        .platform-icon.twitter { background: #1da1f2; }
+        .platform-icon.reddit { background: #ff4500; }
+        .platform-icon.facebook { background: #1877f2; }
+        .post-meta {
+            flex: 1;
+        }
+        .post-platform {
+            font-weight: 600;
+            color: var(--text-color);
+        }
+        .post-timestamp {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        .post-content {
+            padding: 20px;
+        }
+        .post-media {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .post-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .post-media video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .play-button {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .play-button:hover {
+            transform: scale(1.1);
+        }
+        .post-text {
+            color: var(--text-color);
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .post-engagement {
+            display: flex;
+            gap: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #e0e0e0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        .engagement-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .post-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .post-link:hover {
+            text-decoration: underline;
+        }
+        .embed-container {
+            width: 100%;
+            min-height: 400px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 768px) {
+            .social-grid {
+                grid-template-columns: 1fr;
+            }
+            .social-hero h1 {
+                font-size: 2rem;
+            }
+            .filter-tabs {
+                padding: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="social-hero">
+        <div class="container">
+            <h1>Social Media Hub</h1>
+            <p>Stay connected across all platforms</p>
+        </div>
+    </section>
+
+    <!-- Filter Tabs -->
+    <section class="about">
+        <div class="container">
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">
+                    <i class="fas fa-globe"></i> All Posts
+                </button>
+                <button class="filter-tab" data-filter="instagram">
+                    <i class="fab fa-instagram"></i> Instagram
+                </button>
+                <button class="filter-tab" data-filter="linkedin">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </button>
+                <button class="filter-tab" data-filter="twitter">
+                    <i class="fab fa-twitter"></i> X/Twitter
+                </button>
+                <button class="filter-tab" data-filter="reddit">
+                    <i class="fab fa-reddit"></i> Reddit
+                </button>
+                <button class="filter-tab" data-filter="facebook">
+                    <i class="fab fa-facebook"></i> Facebook
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Posts Grid -->
+    <section class="about">
+        <div class="container">
+            <div class="social-grid" id="socialGrid">
+                <!-- Instagram Reel -->
+                <div class="social-post" data-platform="instagram" data-timestamp="1704067200">
+                    <div class="post-header">
+                        <div class="platform-icon instagram">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="post-meta">
+                            <div class="post-platform">Instagram</div>
+                            <div class="post-timestamp">2 days ago</div>
+                        </div>
+                    </div>
+                    <div class="post-media">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                            <i class="fas fa-video"></i>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p class="post-text">Check out my latest tech insights! 🚀 #TechLife #Engineering</p>
+                        <div class="post-engagement">
+                            <span class="engagement-item"><i class="fas fa-heart"></i> 1.2K</span>
+                            <span class="engagement-item"><i class="fas fa-comment"></i> 45</span>
+                            <span class="engagement-item"><i class="fas fa-share"></i> 23</span>
+                        </div>
+                        <a href="#" class="post-link">View on Instagram <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- LinkedIn Post -->
+                <div class="social-post" data-platform="linkedin" data-timestamp="1704153600">
+                    <div class="post-header">
+                        <div class="platform-icon linkedin">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="post-meta">
+                            <div class="post-platform">LinkedIn</div>
+                            <div class="post-timestamp">1 day ago</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p class="post-text">Excited to share insights on building scalable microservices architecture. Key takeaways from my recent project at IBM watsonx.data...</p>
+                        <div class="post-engagement">
+                            <span class="engagement-item"><i class="fas fa-thumbs-up"></i> 342</span>
+                            <span class="engagement-item"><i class="fas fa-comment"></i> 28</span>
+                            <span class="engagement-item"><i class="fas fa-share"></i> 15</span>
+                        </div>
+                        <a href="#" class="post-link">View on LinkedIn <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Twitter/X Post -->
+                <div class="social-post" data-platform="twitter" data-timestamp="1704240000">
+                    <div class="post-header">
+                        <div class="platform-icon twitter">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <div class="post-meta">
+                            <div class="post-platform">X (Twitter)</div>
+                            <div class="post-timestamp">12 hours ago</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p class="post-text">Just deployed a new feature using Kubernetes and OpenTelemetry. The observability improvements are game-changing! 🎯 #DevOps #CloudNative</p>
+                        <div class="post-engagement">
+                            <span class="engagement-item"><i class="fas fa-heart"></i> 567</span>
+                            <span class="engagement-item"><i class="fas fa-retweet"></i> 89</span>
+                            <span class="engagement-item"><i class="fas fa-comment"></i> 34</span>
+                        </div>
+                        <a href="#" class="post-link">View on X <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Instagram Image -->
+                <div class="social-post" data-platform="instagram" data-timestamp="1703980800">
+                    <div class="post-header">
+                        <div class="platform-icon instagram">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="post-meta">
+                            <div class="post-platform">Instagram</div>
+                            <div class="post-timestamp">3 days ago</div>
+                        </div>
+                    </div>
+                    <div class="post-media">
+                        <div style="background: linear-gradient(135deg, #0f62fe 0%, #0353e9 100%); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p class="post-text">Office setup for maximum productivity 💻 #WorkFromHome #TechSetup</p>
+                        <div class="post-engagement">
+                            <span class="engagement-item"><i class="fas fa-heart"></i> 892</span>
+                            <span class="engagement-item"><i class="fas fa-comment"></i> 31</span>
+                            <span class="engagement-item"><i class="fas fa-share"></i> 12</span>
+                        </div>
+                        <a href="#" class="post-link">View on Instagram <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Reddit Post -->
+                <div class="social-post" data-platform="reddit" data-timestamp="1704326400">
+                    <div class="post-header">
+                        <div class="platform-icon reddit">
+                            <i class="fab fa-reddit"></i>
+                        </div>
+                        <div class="post-meta">
+                            <div class="post-platform">Reddit</div>
+                            <div class="post-timestamp">6 hours ago</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p class="post-text"><strong>r/programming</strong> - Best practices for implementing distributed tracing in microservices</p>
+                        <p class="post-text" style="margin-top: 10px;">After working with OpenTelemetry for the past year, here are my top recommendations...</p>
+                        <div class="post-engagement">
+                            <span class="engagement-item"><i class="fas fa-arrow-up"></i> 234</span>
+                            <span class="engagement-item"><i class="fas fa-comment"></i> 67</span>
+                            <span class="engagement-item"><i class="fas fa-share"></i> 19</span>
+                        </div>
+                        <a href="#" class="post-link">View on Reddit <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Facebook Post -->
+                <div class="social-post" data-platform="facebook" data-timestamp="1703894400">
+                    <div class="post-header">
+                        <div class="platform-icon facebook">
+                            <i class="fab fa-facebook"></i>
+                        </div>
+                        <div class="post-meta">
+                            <div class="post-platform">Facebook</div>
+                            <div class="post-timestamp">4 days ago</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p class="post-text">Grateful for the amazing team at IBM! Working on cutting-edge data platform technology has been an incredible journey. 🚀</p>
+                        <div class="post-engagement">
+                            <span class="engagement-item"><i class="fas fa-thumbs-up"></i> 156</span>
+                            <span class="engagement-item"><i class="fas fa-comment"></i> 23</span>
+                            <span class="engagement-item"><i class="fas fa-share"></i> 8</span>
+                        </div>
+                        <a href="#" class="post-link">View on Facebook <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span data-current-year>2024</span> Yashwanth Krishnan. All rights reserved.</p>
+            <p>Built with <i class="fas fa-heart"></i> and passion</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Filter functionality
+        const filterTabs = document.querySelectorAll('.filter-tab');
+        const socialPosts = document.querySelectorAll('.social-post');
+
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                filterTabs.forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                tab.classList.add('active');
+
+                const filter = tab.dataset.filter;
+
+                // Filter posts with smooth transition
+                socialPosts.forEach(post => {
+                    if (filter === 'all' || post.dataset.platform === filter) {
+                        post.style.display = 'block';
+                        setTimeout(() => {
+                            post.style.opacity = '1';
+                            post.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        post.style.opacity = '0';
+                        post.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            post.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Play button functionality for video posts
+        document.querySelectorAll('.play-button').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('Video playback would be implemented here with actual Instagram Reel embed');
+            });
+        });
+
+        // Sort posts by timestamp (newest first)
+        function sortPosts() {
+            const grid = document.getElementById('socialGrid');
+            const posts = Array.from(socialPosts);
+            
+            posts.sort((a, b) => {
+                return parseInt(b.dataset.timestamp) - parseInt(a.dataset.timestamp);
+            });
+
+            posts.forEach(post => grid.appendChild(post));
+        }
+
+        // Initialize
+        sortPosts();
+    </script>
+</body>
+</html>

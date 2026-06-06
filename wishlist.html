@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wishlist Products - Yashwanth Krishnan">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Wishlist Products - Yashwanth Krishnan</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <!-- IBM Plex Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .wishlist-hero {
+            padding: 120px 0 60px;
+            background: linear-gradient(135deg, #0f62fe 0%, #0353e9 100%);
+            color: white;
+            text-align: center;
+        }
+        .wishlist-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .wishlist-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .controls-section {
+            padding: 40px 0;
+            background: #f8f9fa;
+        }
+        .controls-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .search-box {
+            flex: 1;
+            min-width: 250px;
+            position: relative;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 12px 45px 12px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        .search-box i {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+        }
+        .filter-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .filter-btn, .sort-btn {
+            padding: 10px 20px;
+            background: white;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        .filter-btn:hover, .sort-btn:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+        .filter-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        .sort-dropdown {
+            position: relative;
+        }
+        .sort-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(15, 98, 254, 0.2);
+        }
+        .wishlist-toggle {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+        .wishlist-toggle:hover {
+            transform: scale(1.1);
+        }
+        .wishlist-toggle i {
+            color: #e0e0e0;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+        .wishlist-toggle.active i {
+            color: #ff4757;
+        }
+        .product-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--primary-color);
+        }
+        .product-info {
+            padding: 20px;
+        }
+        .product-category {
+            display: inline-block;
+            padding: 4px 12px;
+            background: #e8f4ff;
+            color: var(--primary-color);
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .product-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+        .product-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #ffa502;
+        }
+        .product-actions {
+            display: flex;
+            gap: 10px;
+        }
+        .buy-btn {
+            flex: 1;
+            padding: 12px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+        }
+        .buy-btn:hover {
+            background: #0353e9;
+        }
+        .stats-section {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 30px 0;
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .wishlist-hero h1 {
+                font-size: 2rem;
+            }
+            .controls-container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .search-box {
+                width: 100%;
+            }
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            .stats-section {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="wishlist-hero">
+        <div class="container">
+            <h1><i class="fas fa-heart"></i> My Wishlist</h1>
+            <p>Curated collection of products I love and recommend. These are items I've researched, tested, or aspire to own.</p>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="about">
+        <div class="container">
+            <div class="stats-section">
+                <div class="stat-item">
+                    <div class="stat-number" id="totalProducts">24</div>
+                    <div class="stat-label">Total Products</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="totalCategories">6</div>
+                    <div class="stat-label">Categories</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="wishlistedItems">18</div>
+                    <div class="stat-label">Wishlisted</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Controls Section -->
+    <section class="controls-section">
+        <div class="container">
+            <div class="controls-container">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search products...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="filter-group">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="electronics">Electronics</button>
+                    <button class="filter-btn" data-category="books">Books</button>
+                    <button class="filter-btn" data-category="gadgets">Gadgets</button>
+                    <button class="filter-btn" data-category="fashion">Fashion</button>
+                    <button class="filter-btn" data-category="home">Home & Living</button>
+                </div>
+                <div class="sort-dropdown">
+                    <button class="sort-btn" id="sortBtn">
+                        <i class="fas fa-sort"></i> Sort by: <span id="sortLabel">Date Added</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="about">
+        <div class="container">
+            <div class="products-grid" id="productsGrid">
+                <!-- Product cards will be dynamically generated -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span data-current-year>2024</span> Yashwanth Krishnan. All rights reserved.</p>
+            <p>Built with <i class="fas fa-heart"></i> and passion</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Product data
+        const products = [
+            {
+                id: 1,
+                title: "MacBook Pro M3 Max",
+                description: "Ultimate powerhouse for development and creative work with exceptional performance.",
+                price: "$3,499",
+                category: "electronics",
+                rating: 4.9,
+                icon: "fa-laptop",
+                wishlisted: true,
+                dateAdded: new Date('2024-01-15'),
+                link: "#"
+            },
+            {
+                id: 2,
+                title: "Sony WH-1000XM5",
+                description: "Industry-leading noise cancellation headphones for focused work sessions.",
+                price: "$399",
+                category: "electronics",
+                rating: 4.8,
+                icon: "fa-headphones",
+                wishlisted: true,
+                dateAdded: new Date('2024-01-20'),
+                link: "#"
+            },
+            {
+                id: 3,
+                title: "Clean Code by Robert Martin",
+                description: "Essential reading for writing maintainable and elegant code.",
+                price: "$42",
+                category: "books",
+                rating: 4.7,
+                icon: "fa-book",
+                wishlisted: true,
+                dateAdded: new Date('2024-01-10'),
+                link: "#"
+            },
+            {
+                id: 4,
+                title: "Mechanical Keyboard",
+                description: "Premium mechanical keyboard with Cherry MX switches for optimal typing experience.",
+                price: "$189",
+                category: "gadgets",
+                rating: 4.6,
+                icon: "fa-keyboard",
+                wishlisted: false,
+                dateAdded: new Date('2024-02-01'),
+                link: "#"
+            },
+            {
+                id: 5,
+                title: "iPad Pro 12.9\"",
+                description: "Perfect companion for sketching, note-taking, and on-the-go productivity.",
+                price: "$1,099",
+                category: "electronics",
+                rating: 4.8,
+                icon: "fa-tablet",
+                wishlisted: true,
+                dateAdded: new Date('2024-01-25'),
+                link: "#"
+            },
+            {
+                id: 6,
+                title: "Designing Data-Intensive Applications",
+                description: "Deep dive into distributed systems and data architecture patterns.",
+                price: "$55",
+                category: "books",
+                rating: 4.9,
+                icon: "fa-book",
+                wishlisted: true,
+                dateAdded: new Date('2024-01-12'),
+                link: "#"
+            },
+            {
+                id: 7,
+                title: "Smart Watch Ultra",
+                description: "Advanced fitness tracking and health monitoring with seamless connectivity.",
+                price: "$799",
+                category: "gadgets",
+                rating: 4.5,
+                icon: "fa-clock",
+                wishlisted: true,
+                dateAdded: new Date('2024-02-05'),
+                link: "#"
+            },
+            {
+                id: 8,
+                title: "Ergonomic Office Chair",
+                description: "Premium ergonomic chair for long coding sessions with lumbar support.",
+                price: "$649",
+                category: "home",
+                rating: 4.7,
+                icon: "fa-chair",
+                wishlisted: false,
+                dateAdded: new Date('2024-01-30'),
+                link: "#"
+            },
+            {
+                id: 9,
+                title: "Minimalist Backpack",
+                description: "Sleek, durable backpack with laptop compartment for daily commute.",
+                price: "$129",
+                category: "fashion",
+                rating: 4.6,
+                icon: "fa-bag-shopping",
+                wishlisted: true,
+                dateAdded: new Date('2024-02-10'),
+                link: "#"
+            },
+            {
+                id: 10,
+                title: "4K Webcam",
+                description: "Crystal clear video quality for remote meetings and content creation.",
+                price: "$199",
+                category: "gadgets",
+                rating: 4.5,
+                icon: "fa-video",
+                wishlisted: false,
+                dateAdded: new Date('2024-02-08'),
+                link: "#"
+            },
+            {
+                id: 11,
+                title: "The Pragmatic Programmer",
+                description: "Timeless wisdom on software craftsmanship and professional development.",
+                price: "$45",
+                category: "books",
+                rating: 4.8,
+                icon: "fa-book",
+                wishlisted: true,
+                dateAdded: new Date('2024-01-18'),
+                link: "#"
+            },
+            {
+                id: 12,
+                title: "Standing Desk",
+                description: "Electric height-adjustable desk for better posture and health.",
+                price: "$599",
+                category: "home",
+                rating: 4.7,
+                icon: "fa-desktop",
+                wishlisted: true,
+                dateAdded: new Date('2024-01-28'),
+                link: "#"
+            },
+            {
+                id: 13,
+                title: "Portable SSD 2TB",
+                description: "Lightning-fast external storage for backups and large projects.",
+                price: "$249",
+                category: "electronics",
+                rating: 4.8,
+                icon: "fa-hard-drive",
+                wishlisted: true,
+                dateAdded: new Date('2024-02-03'),
+                link: "#"
+            },
+            {
+                id: 14,
+                title: "Smart LED Desk Lamp",
+                description: "Adjustable color temperature lamp with wireless charging base.",
+                price: "$89",
+                category: "home",
+                rating: 4.4,
+                icon: "fa-lightbulb",
+                wishlisted: false,
+                dateAdded: new Date('2024-02-12'),
+                link: "#"
+            },
+            {
+                id: 15,
+                title: "Wireless Mouse MX Master 3S",
+                description: "Precision mouse with customizable buttons and multi-device support.",
+                price: "$99",
+                category: "gadgets",
+                rating: 4.7,
+                icon: "fa-computer-mouse",
+                wishlisted: true,
+                dateAdded: new Date('2024-01-22'),
+                link: "#"
+            },
+            {
+                id: 16,
+                title: "System Design Interview",
+                description: "Comprehensive guide to acing system design interviews at top tech companies.",
+                price: "$38",
+                category: "books",
+                rating: 4.6,
+                icon: "fa-book",
+                wishlisted: true,
+                dateAdded: new Date('2024-01-14'),
+                link: "#"
+            },
+            {
+                id: 17,
+                title: "Noise-Cancelling Earbuds",
+                description: "Compact wireless earbuds with active noise cancellation for travel.",
+                price: "$249",
+                category: "electronics",
+                rating: 4.5,
+                icon: "fa-headphones",
+                wishlisted: false,
+                dateAdded: new Date('2024-02-07'),
+                link: "#"
+            },
+            {
+                id: 18,
+                title: "Premium Hoodie",
+                description: "Comfortable tech-inspired hoodie perfect for casual coding sessions.",
+                price: "$79",
+                category: "fashion",
+                rating: 4.3,
+                icon: "fa-shirt",
+                wishlisted: true,
+                dateAdded: new Date('2024-02-15'),
+                link: "#"
+            },
+            {
+                id: 19,
+                title: "Monitor Arm Mount",
+                description: "Dual monitor arm for ergonomic screen positioning and desk space.",
+                price: "$149",
+                category: "home",
+                rating: 4.6,
+                icon: "fa-display",
+                wishlisted: true,
+                dateAdded: new Date('2024-02-02'),
+                link: "#"
+            },
+            {
+                id: 20,
+                title: "USB-C Hub",
+                description: "Multi-port hub with HDMI, USB 3.0, and SD card reader.",
+                price: "$59",
+                category: "gadgets",
+                rating: 4.4,
+                icon: "fa-plug",
+                wishlisted: false,
+                dateAdded: new Date('2024-02-11'),
+                link: "#"
+            },
+            {
+                id: 21,
+                title: "Atomic Habits",
+                description: "Proven framework for building good habits and breaking bad ones.",
+                price: "$27",
+                category: "books",
+                rating: 4.8,
+                icon: "fa-book",
+                wishlisted: true,
+                dateAdded: new Date('2024-01-16'),
+                link: "#"
+            },
+            {
+                id: 22,
+                title: "Cable Management Kit",
+                description: "Complete solution for organizing desk cables and reducing clutter.",
+                price: "$29",
+                category: "home",
+                rating: 4.5,
+                icon: "fa-plug",
+                wishlisted: false,
+                dateAdded: new Date('2024-02-14'),
+                link: "#"
+            },
+            {
+                id: 23,
+                title: "Portable Monitor",
+                description: "15.6\" USB-C portable display for dual-screen productivity anywhere.",
+                price: "$299",
+                category: "electronics",
+                rating: 4.6,
+                icon: "fa-tv",
+                wishlisted: true,
+                dateAdded: new Date('2024-02-06'),
+                link: "#"
+            },
+            {
+                id: 24,
+                title: "Smart Water Bottle",
+                description: "Hydration tracking bottle with temperature display and reminders.",
+                price: "$49",
+                category: "gadgets",
+                rating: 4.2,
+                icon: "fa-bottle-water",
+                wishlisted: false,
+                dateAdded: new Date('2024-02-13'),
+                link: "#"
+            }
+        ];
+
+        let currentFilter = 'all';
+        let currentSort = 'dateAdded';
+        let searchQuery = '';
+
+        // Render products
+        function renderProducts() {
+            const grid = document.getElementById('productsGrid');
+            let filteredProducts = products.filter(product => {
+                const matchesCategory = currentFilter === 'all' || product.category === currentFilter;
+                const matchesSearch = product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                    product.description.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchesCategory && matchesSearch;
+            });
+
+            // Sort products
+            filteredProducts.sort((a, b) => {
+                if (currentSort === 'price') {
+                    return parseFloat(a.price.replace(/[$,]/g, '')) - parseFloat(b.price.replace(/[$,]/g, ''));
+                } else if (currentSort === 'rating') {
+                    return b.rating - a.rating;
+                } else if (currentSort === 'dateAdded') {
+                    return b.dateAdded - a.dateAdded;
+                }
+                return 0;
+            });
+
+            grid.innerHTML = filteredProducts.map(product => `
+                <div class="product-card" data-category="${product.category}">
+                    <div class="wishlist-toggle ${product.wishlisted ? 'active' : ''}" data-id="${product.id}">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="product-image">
+                        <i class="fas ${product.icon}"></i>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">${product.category}</span>
+                        <h3 class="product-title">${product.title}</h3>
+                        <p class="product-description">${product.description}</p>
+                        <div class="product-meta">
+                            <span class="product-price">${product.price}</span>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>${product.rating}</span>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <a href="${product.link}" class="buy-btn" target="_blank">
+                                <i class="fas fa-shopping-cart"></i> Buy Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            // Update stats
+            document.getElementById('totalProducts').textContent = products.length;
+            document.getElementById('wishlistedItems').textContent = products.filter(p => p.wishlisted).length;
+
+            // Add wishlist toggle listeners
+            document.querySelectorAll('.wishlist-toggle').forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const productId = parseInt(this.dataset.id);
+                    const product = products.find(p => p.id === productId);
+                    product.wishlisted = !product.wishlisted;
+                    this.classList.toggle('active');
+                    document.getElementById('wishlistedItems').textContent = products.filter(p => p.wishlisted).length;
+                });
+            });
+        }
+
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                currentFilter = this.dataset.category;
+                renderProducts();
+            });
+        });
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            searchQuery = e.target.value;
+            renderProducts();
+        });
+
+        // Sort functionality
+        let sortOptions = ['dateAdded', 'price', 'rating'];
+        let sortLabels = ['Date Added', 'Price', 'Rating'];
+        let currentSortIndex = 0;
+
+        document.getElementById('sortBtn').addEventListener('click', function() {
+            currentSortIndex = (currentSortIndex + 1) % sortOptions.length;
+            currentSort = sortOptions[currentSortIndex];
+            document.getElementById('sortLabel').textContent = sortLabels[currentSortIndex];
+            renderProducts();
+        });
+
+        // Initialize
+        renderProducts();
+    </script>
+</body>
+</html>

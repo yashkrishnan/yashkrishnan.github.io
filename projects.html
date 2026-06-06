@@ -16,7 +16,7 @@
 <body>
     <!-- Navigation -->
     <nav id="main-navigation" class="navbar">
-        <div class="container">
+        <div id="nav-container" class="container">
             <ul id="nav-menu" class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -26,7 +26,7 @@
                 <li><a href="education.html">Education</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="hamburger">
+            <div id="hamburger-menu" class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -36,20 +36,20 @@
 
     <!-- Projects Section -->
     <section id="projects-section" class="projects" style="padding-top: 120px;">
-        <div class="container">
+        <div id="projects-container" class="container">
             <h2 id="projects-title" class="section-title">Technical Projects</h2>
             <div id="projects-intro" class="about-text" style="text-align: center; margin-bottom: 40px;">
-                <p>Featured projects showcasing expertise in AI/ML, cloud architecture, data platforms, and enterprise solutions.</p>
+                <p id="projects-intro-text">Featured projects showcasing expertise in AI/ML, cloud architecture, data platforms, and enterprise solutions.</p>
             </div>
-            <div class="projects-grid">
-                <div class="project-card" style="border: 2px solid var(--primary-color);">
-                    <div class="project-image" style="background: linear-gradient(135deg, #0f62fe 0%, #0353e9 100%);">
-                        <div class="project-placeholder">IBM WatsonX</div>
+            <div id="projects-grid" class="projects-grid">
+                <div id="project-watsonx" class="project-card" style="border: 2px solid var(--primary-color);">
+                    <div id="project-watsonx-image" class="project-image" style="background: linear-gradient(135deg, #0f62fe 0%, #0353e9 100%);">
+                        <div id="project-watsonx-placeholder" class="project-placeholder">IBM WatsonX</div>
                     </div>
-                    <div class="project-info">
-                        <h3>IBM WatsonX Data <span style="color: var(--primary-color); font-size: 0.8rem; font-weight: 400;">(Current)</span></h3>
-                        <p>Leading Serviceability team and Presto engine development for IBM's next-generation data lakehouse platform. Building scalable data management solutions with open architecture, enabling AI workloads across hybrid cloud environments with governance and automation.</p>
-                        <div class="project-tags">
+                    <div id="project-watsonx-info" class="project-info">
+                        <h3 id="project-watsonx-title">IBM WatsonX Data <span style="color: var(--primary-color); font-size: 0.8rem; font-weight: 400;">(Current)</span></h3>
+                        <p id="project-watsonx-desc">Leading Serviceability team and Presto engine development for IBM's next-generation data lakehouse platform. Building scalable data management solutions with open architecture, enabling AI workloads across hybrid cloud environments with governance and automation.</p>
+                        <div id="project-watsonx-tags" class="project-tags">
                             <span>Team Lead</span>
                             <span>Presto</span>
                             <span>Data Lakehouse</span>
@@ -59,14 +59,14 @@
                         <a href="https://www.ibm.com/products/watsonx-data" target="_blank" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="project-card" style="border: 2px solid var(--primary-color);">
-                    <div class="project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                        <div class="project-placeholder">Data Platform</div>
+                <div id="project-data-platform" class="project-card" style="border: 2px solid var(--primary-color);">
+                    <div id="project-data-platform-image" class="project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <div id="project-data-platform-placeholder" class="project-placeholder">Data Platform</div>
                     </div>
-                    <div class="project-info">
-                        <h3>Unified Data Platform <span style="color: var(--primary-color); font-size: 0.8rem; font-weight: 400;">(Featured)</span></h3>
-                        <p>Enterprise-scale unified data platform with automated ETL pipelines using Python, MuleSoft, and Snowflake. Implemented data workflows, transformations, and integrations for seamless data movement across multiple systems with governance and quality controls.</p>
-                        <div class="project-tags">
+                    <div id="project-data-platform-info" class="project-info">
+                        <h3 id="project-data-platform-title">Unified Data Platform <span style="color: var(--primary-color); font-size: 0.8rem; font-weight: 400;">(Featured)</span></h3>
+                        <p id="project-data-platform-desc">Enterprise-scale unified data platform with automated ETL pipelines using Python, MuleSoft, and Snowflake. Implemented data workflows, transformations, and integrations for seamless data movement across multiple systems with governance and quality controls.</p>
+                        <div id="project-data-platform-tags" class="project-tags">
                             <span>Python</span>
                             <span>MuleSoft</span>
                             <span>Snowflake</span>
@@ -76,14 +76,14 @@
                         <a href="#" class="project-link">Enterprise Project <i class="fas fa-lock"></i></a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">AI/ML</div>
+                <div id="project-doc-extraction" class="project-card">
+                    <div id="project-doc-extraction-image" class="project-image">
+                        <div id="project-doc-extraction-placeholder" class="project-placeholder">AI/ML</div>
                     </div>
-                    <div class="project-info">
-                        <h3>Document Extraction using LLMs</h3>
-                        <p>AI-powered document extraction system using Large Language Models for automated information extraction from scanned documents. Integrated on-premise LLM with custom semantic matcher (Mandrake) for pattern recognition and e-fax systems.</p>
-                        <div class="project-tags">
+                    <div id="project-doc-extraction-info" class="project-info">
+                        <h3 id="project-doc-extraction-title">Document Extraction using LLMs</h3>
+                        <p id="project-doc-extraction-desc">AI-powered document extraction system using Large Language Models for automated information extraction from scanned documents. Integrated on-premise LLM with custom semantic matcher (Mandrake) for pattern recognition and e-fax systems.</p>
+                        <div id="project-doc-extraction-tags" class="project-tags">
                             <span>Python</span>
                             <span>LLM</span>
                             <span>Machine Learning</span>
@@ -92,14 +92,14 @@
                         <a href="https://dexlock.com/portfolio/document-extraction/" target="_blank" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">NLP</div>
+                <div id="project-nlp-analytics" class="project-card">
+                    <div id="project-nlp-analytics-image" class="project-image">
+                        <div id="project-nlp-analytics-placeholder" class="project-placeholder">NLP</div>
                     </div>
-                    <div class="project-info">
-                        <h3>NLP Analytics System</h3>
-                        <p>Advanced NLP analytics system using Stanford CoreNLP for sentiment analysis, entity recognition, and text classification. Processes large volumes of text data for business intelligence and customer insights with real-time analysis capabilities.</p>
-                        <div class="project-tags">
+                    <div id="project-nlp-analytics-info" class="project-info">
+                        <h3 id="project-nlp-analytics-title">NLP Analytics System</h3>
+                        <p id="project-nlp-analytics-desc">Advanced NLP analytics system using Stanford CoreNLP for sentiment analysis, entity recognition, and text classification. Processes large volumes of text data for business intelligence and customer insights with real-time analysis capabilities.</p>
+                        <div id="project-nlp-analytics-tags" class="project-tags">
                             <span>Python</span>
                             <span>Stanford CoreNLP</span>
                             <span>NLP</span>
@@ -108,14 +108,14 @@
                         <a href="#" class="project-link">Enterprise Project <i class="fas fa-lock"></i></a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">SnapRapid</div>
+                <div id="project-snaprapid" class="project-card">
+                    <div id="project-snaprapid-image" class="project-image">
+                        <div id="project-snaprapid-placeholder" class="project-placeholder">SnapRapid</div>
                     </div>
-                    <div class="project-info">
-                        <h3>SnapRapid - Rapid Development Platform</h3>
-                        <p>Enterprise rapid application development platform enabling quick deployment of business applications with microservices architecture and cloud-native design patterns.</p>
-                        <div class="project-tags">
+                    <div id="project-snaprapid-info" class="project-info">
+                        <h3 id="project-snaprapid-title">SnapRapid - Rapid Development Platform</h3>
+                        <p id="project-snaprapid-desc">Enterprise rapid application development platform enabling quick deployment of business applications with microservices architecture and cloud-native design patterns.</p>
+                        <div id="project-snaprapid-tags" class="project-tags">
                             <span>Java</span>
                             <span>SpringBoot</span>
                             <span>Microservices</span>
@@ -124,14 +124,14 @@
                         <a href="https://dexlock.com/portfolio/snaprapid/" target="_blank" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">CareerLabs</div>
+                <div id="project-careerlabs" class="project-card">
+                    <div id="project-careerlabs-image" class="project-image">
+                        <div id="project-careerlabs-placeholder" class="project-placeholder">CareerLabs</div>
                     </div>
-                    <div class="project-info">
-                        <h3>CareerLabs - Career Development Platform</h3>
-                        <p>Comprehensive career development and learning management system with personalized learning paths, skill assessments, and job matching capabilities.</p>
-                        <div class="project-tags">
+                    <div id="project-careerlabs-info" class="project-info">
+                        <h3 id="project-careerlabs-title">CareerLabs - Career Development Platform</h3>
+                        <p id="project-careerlabs-desc">Comprehensive career development and learning management system with personalized learning paths, skill assessments, and job matching capabilities.</p>
+                        <div id="project-careerlabs-tags" class="project-tags">
                             <span>React</span>
                             <span>Node.js</span>
                             <span>MongoDB</span>
@@ -140,14 +140,14 @@
                         <a href="https://dexlock.com/portfolio/careerlabs/" target="_blank" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">SafeGuard</div>
+                <div id="project-safeguard" class="project-card">
+                    <div id="project-safeguard-image" class="project-image">
+                        <div id="project-safeguard-placeholder" class="project-placeholder">SafeGuard</div>
                     </div>
-                    <div class="project-info">
-                        <h3>SafeGuard - Security Management System</h3>
-                        <p>Enterprise security and access management platform with real-time monitoring, threat detection, and compliance reporting capabilities.</p>
-                        <div class="project-tags">
+                    <div id="project-safeguard-info" class="project-info">
+                        <h3 id="project-safeguard-title">SafeGuard - Security Management System</h3>
+                        <p id="project-safeguard-desc">Enterprise security and access management platform with real-time monitoring, threat detection, and compliance reporting capabilities.</p>
+                        <div id="project-safeguard-tags" class="project-tags">
                             <span>Java</span>
                             <span>Security</span>
                             <span>Monitoring</span>
@@ -156,14 +156,14 @@
                         <a href="https://dexlock.com/portfolio/safeguard/" target="_blank" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">Semantic Web</div>
+                <div id="project-semantic" class="project-card">
+                    <div id="project-semantic-image" class="project-image">
+                        <div id="project-semantic-placeholder" class="project-placeholder">Semantic Web</div>
                     </div>
-                    <div class="project-info">
-                        <h3>Semantic Ontologies Platform</h3>
-                        <p>Advanced semantic web platform leveraging ontologies and knowledge graphs for organizational data management and intelligent information retrieval.</p>
-                        <div class="project-tags">
+                    <div id="project-semantic-info" class="project-info">
+                        <h3 id="project-semantic-title">Semantic Ontologies Platform</h3>
+                        <p id="project-semantic-desc">Advanced semantic web platform leveraging ontologies and knowledge graphs for organizational data management and intelligent information retrieval.</p>
+                        <div id="project-semantic-tags" class="project-tags">
                             <span>Semantic Web</span>
                             <span>Ontologies</span>
                             <span>NLP</span>
@@ -172,14 +172,14 @@
                         <a href="https://dexlock.com/portfolio/semantic-ontologies-for-organizational-success/" target="_blank" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">Instio</div>
+                <div id="project-instio" class="project-card">
+                    <div id="project-instio-image" class="project-image">
+                        <div id="project-instio-placeholder" class="project-placeholder">Instio</div>
                     </div>
-                    <div class="project-info">
-                        <h3>Instio - Guest Experience Platform</h3>
-                        <p>Comprehensive guest experience management platform for hospitality industry with feedback collection, marketing automation, and analytics capabilities.</p>
-                        <div class="project-tags">
+                    <div id="project-instio-info" class="project-info">
+                        <h3 id="project-instio-title">Instio - Guest Experience Platform</h3>
+                        <p id="project-instio-desc">Comprehensive guest experience management platform for hospitality industry with feedback collection, marketing automation, and analytics capabilities.</p>
+                        <div id="project-instio-tags" class="project-tags">
                             <span>Java</span>
                             <span>SpringBoot</span>
                             <span>Analytics</span>
@@ -188,14 +188,14 @@
                         <a href="https://www.instio.co/" target="_blank" class="project-link">Visit Site <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">E-Commerce</div>
+                <div id="project-ecommerce" class="project-card">
+                    <div id="project-ecommerce-image" class="project-image">
+                        <div id="project-ecommerce-placeholder" class="project-placeholder">E-Commerce</div>
                     </div>
-                    <div class="project-info">
-                        <h3>Custom Scalable E-Commerce Platform</h3>
-                        <p>Enterprise-grade e-commerce solution with custom features, scalable architecture, payment gateway integration, and advanced inventory management.</p>
-                        <div class="project-tags">
+                    <div id="project-ecommerce-info" class="project-info">
+                        <h3 id="project-ecommerce-title">Custom Scalable E-Commerce Platform</h3>
+                        <p id="project-ecommerce-desc">Enterprise-grade e-commerce solution with custom features, scalable architecture, payment gateway integration, and advanced inventory management.</p>
+                        <div id="project-ecommerce-tags" class="project-tags">
                             <span>Java</span>
                             <span>Microservices</span>
                             <span>Payment Gateway</span>
@@ -204,14 +204,14 @@
                         <a href="https://dexlock.com/portfolio/custom-scalable-ecommerce-platform/" target="_blank" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">LuLu Money</div>
+                <div id="project-lulumoney" class="project-card">
+                    <div id="project-lulumoney-image" class="project-image">
+                        <div id="project-lulumoney-placeholder" class="project-placeholder">LuLu Money</div>
                     </div>
-                    <div class="project-info">
-                        <h3>LuLu Money - International Exchange</h3>
-                        <p>Financial technology platform for international money transfers with real-time exchange rates, compliance management, and multi-currency support.</p>
-                        <div class="project-tags">
+                    <div id="project-lulumoney-info" class="project-info">
+                        <h3 id="project-lulumoney-title">LuLu Money - International Exchange</h3>
+                        <p id="project-lulumoney-desc">Financial technology platform for international money transfers with real-time exchange rates, compliance management, and multi-currency support.</p>
+                        <div id="project-lulumoney-tags" class="project-tags">
                             <span>FinTech</span>
                             <span>Java</span>
                             <span>APIs</span>
@@ -220,14 +220,14 @@
                         <a href="https://www.lulumoney.com/" target="_blank" class="project-link">Visit Site <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">StatFuel</div>
+                <div id="project-statfuel" class="project-card">
+                    <div id="project-statfuel-image" class="project-image">
+                        <div id="project-statfuel-placeholder" class="project-placeholder">StatFuel</div>
                     </div>
-                    <div class="project-info">
-                        <h3>StatFuel - Analytics Platform</h3>
-                        <p>Advanced analytics and data visualization platform providing real-time insights, custom dashboards, and predictive analytics for business intelligence.</p>
-                        <div class="project-tags">
+                    <div id="project-statfuel-info" class="project-info">
+                        <h3 id="project-statfuel-title">StatFuel - Analytics Platform</h3>
+                        <p id="project-statfuel-desc">Advanced analytics and data visualization platform providing real-time insights, custom dashboards, and predictive analytics for business intelligence.</p>
+                        <div id="project-statfuel-tags" class="project-tags">
                             <span>Python</span>
                             <span>Analytics</span>
                             <span>Visualization</span>
@@ -236,14 +236,14 @@
                         <a href="https://dexlock.com/portfolio/statfuel/" target="_blank" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">YOM</div>
+                <div id="project-yom" class="project-card">
+                    <div id="project-yom-image" class="project-image">
+                        <div id="project-yom-placeholder" class="project-placeholder">YOM</div>
                     </div>
-                    <div class="project-info">
-                        <h3>YOM Platform - FinTech Transformation</h3>
-                        <p>Large-scale FinTech platform for Lulu International Exchange handling remittance and forex operations. Led technology transformation from monolith to microservices architecture with 60+ bank integrations and 20+ remittance service APIs.</p>
-                        <div class="project-tags">
+                    <div id="project-yom-info" class="project-info">
+                        <h3 id="project-yom-title">YOM Platform - FinTech Transformation</h3>
+                        <p id="project-yom-desc">Large-scale FinTech platform for Lulu International Exchange handling remittance and forex operations. Led technology transformation from monolith to microservices architecture with 60+ bank integrations and 20+ remittance service APIs.</p>
+                        <div id="project-yom-tags" class="project-tags">
                             <span>SpringBoot</span>
                             <span>Microservices</span>
                             <span>GraphQL</span>
@@ -253,14 +253,14 @@
                         <a href="https://yomweb.luluone.com/" target="_blank" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">Upzel</div>
+                <div id="project-upzel" class="project-card">
+                    <div id="project-upzel-image" class="project-image">
+                        <div id="project-upzel-placeholder" class="project-placeholder">Upzel</div>
                     </div>
-                    <div class="project-info">
-                        <h3>Upzel CRM Suite</h3>
-                        <p>Enterprise CRM platform with multi-tier features for managing Facebook Marketing and Google AdWords campaigns. Integrated FullContact APIs for customer data enrichment and targeted marketing automation.</p>
-                        <div class="project-tags">
+                    <div id="project-upzel-info" class="project-info">
+                        <h3 id="project-upzel-title">Upzel CRM Suite</h3>
+                        <p id="project-upzel-desc">Enterprise CRM platform with multi-tier features for managing Facebook Marketing and Google AdWords campaigns. Integrated FullContact APIs for customer data enrichment and targeted marketing automation.</p>
+                        <div id="project-upzel-tags" class="project-tags">
                             <span>Java</span>
                             <span>Dropwizard</span>
                             <span>MongoDB</span>
@@ -269,14 +269,14 @@
                         <a href="http://upzel.io" target="_blank" class="project-link">Visit Site <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">TempStars</div>
+                <div id="project-tempstars" class="project-card">
+                    <div id="project-tempstars-image" class="project-image">
+                        <div id="project-tempstars-placeholder" class="project-placeholder">TempStars</div>
                     </div>
-                    <div class="project-info">
-                        <h3>TempStars - Dental Hygiene Platform</h3>
-                        <p>Premium dental hygiene temp service using mobile technology to match available hygienists with dental offices. Location-based matching with rating and wage optimization for short-term dental services.</p>
-                        <div class="project-tags">
+                    <div id="project-tempstars-info" class="project-info">
+                        <h3 id="project-tempstars-title">TempStars - Dental Hygiene Platform</h3>
+                        <p id="project-tempstars-desc">Premium dental hygiene temp service using mobile technology to match available hygienists with dental offices. Location-based matching with rating and wage optimization for short-term dental services.</p>
+                        <div id="project-tempstars-tags" class="project-tags">
                             <span>Java</span>
                             <span>MongoDB</span>
                             <span>Payment APIs</span>
@@ -285,14 +285,14 @@
                         <a href="http://tempstars.ca" target="_blank" class="project-link">Visit Site <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">Nikaza</div>
+                <div id="project-nikaza" class="project-card">
+                    <div id="project-nikaza-image" class="project-image">
+                        <div id="project-nikaza-placeholder" class="project-placeholder">Nikaza</div>
                     </div>
-                    <div class="project-info">
-                        <h3>Nikaza Beacon AdServer</h3>
-                        <p>IoT-based micro location contextual engagement and advertising platform using Bluetooth beacons. Real-time ad delivery with effectiveness tracking and visualization for affiliates.</p>
-                        <div class="project-tags">
+                    <div id="project-nikaza-info" class="project-info">
+                        <h3 id="project-nikaza-title">Nikaza Beacon AdServer</h3>
+                        <p id="project-nikaza-desc">IoT-based micro location contextual engagement and advertising platform using Bluetooth beacons. Real-time ad delivery with effectiveness tracking and visualization for affiliates.</p>
+                        <div id="project-nikaza-tags" class="project-tags">
                             <span>IoT</span>
                             <span>Bluetooth</span>
                             <span>OpenTSDB</span>
@@ -301,14 +301,14 @@
                         <a href="http://nikaza.me" target="_blank" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">MyPeepz</div>
+                <div id="project-mypeepz" class="project-card">
+                    <div id="project-mypeepz-image" class="project-image">
+                        <div id="project-mypeepz-placeholder" class="project-placeholder">MyPeepz</div>
                     </div>
-                    <div class="project-info">
-                        <h3>MyPeepz Social Network</h3>
-                        <p>Location-based social discovery network connecting people with shared backgrounds and cultures. Features include photo/video sharing, XMPP chat, GeoJSON location services, and real-time streaming.</p>
-                        <div class="project-tags">
+                    <div id="project-mypeepz-info" class="project-info">
+                        <h3 id="project-mypeepz-title">MyPeepz Social Network</h3>
+                        <p id="project-mypeepz-desc">Location-based social discovery network connecting people with shared backgrounds and cultures. Features include photo/video sharing, XMPP chat, GeoJSON location services, and real-time streaming.</p>
+                        <div id="project-mypeepz-tags" class="project-tags">
                             <span>Java</span>
                             <span>XMPP</span>
                             <span>GeoJSON</span>
@@ -317,14 +317,14 @@
                         <a href="http://mypeeps.me" target="_blank" class="project-link">Visit Site <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">ECommerce</div>
+                <div id="project-ecommrecommender" class="project-card">
+                    <div id="project-ecommrecommender-image" class="project-image">
+                        <div id="project-ecommrecommender-placeholder" class="project-placeholder">ECommerce</div>
                     </div>
-                    <div class="project-info">
-                        <h3>ECommRecommender - ML Engine</h3>
-                        <p>Configurable e-commerce recommendation engine using machine learning to predict business performance and profitability for multi-national conglomerate brands.</p>
-                        <div class="project-tags">
+                    <div id="project-ecommrecommender-info" class="project-info">
+                        <h3 id="project-ecommrecommender-title">ECommRecommender - ML Engine</h3>
+                        <p id="project-ecommrecommender-desc">Configurable e-commerce recommendation engine using machine learning to predict business performance and profitability for multi-national conglomerate brands.</p>
+                        <div id="project-ecommrecommender-tags" class="project-tags">
                             <span>Machine Learning</span>
                             <span>Prediction.io</span>
                             <span>Java</span>

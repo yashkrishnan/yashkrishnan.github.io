@@ -16,7 +16,7 @@
 <body>
     <!-- Navigation -->
     <nav id="main-navigation" class="navbar">
-        <div class="container">
+        <div id="nav-container" class="container">
             <ul id="nav-menu" class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -26,7 +26,7 @@
                 <li><a href="education.html" class="active">Education</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="hamburger">
+            <div id="hamburger-menu" class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -36,27 +36,27 @@
 
     <!-- Education Section -->
     <section id="education-section" class="education" style="padding-top: 120px;">
-        <div class="container">
+        <div id="education-container" class="container">
             <h2 id="education-title" class="section-title">Education & Certifications</h2>
             <div id="education-intro" class="about-text" style="text-align: center; margin-bottom: 40px;">
-                <p>Academic background and professional certifications demonstrating continuous learning and expertise.</p>
+                <p id="education-intro-text">Academic background and professional certifications demonstrating continuous learning and expertise.</p>
             </div>
             
             <!-- Education -->
             <div id="academic-background-section" style="margin-bottom: 60px;">
                 <h3 id="academic-background-title" style="font-size: 1.5rem; margin-bottom: 30px; color: var(--primary-color);">Academic Background</h3>
                 <div id="degree-card" class="experience-card">
-                    <div class="experience-header">
-                        <div>
-                            <h3 style="color: var(--text-color);">B.Tech Degree (Computer Science and Engineering)</h3>
-                            <p class="company">Govt. Model Engineering College, Thrikkakara, Ernakulam</p>
-                            <h4 style="margin-top: 8px; font-weight: 500; color: var(--text-secondary);">Cochin University of Science and Technology</h4>
+                    <div id="degree-header" class="experience-header">
+                        <div id="degree-info">
+                            <h3 id="degree-title" style="color: var(--text-color);">B.Tech Degree (Computer Science and Engineering)</h3>
+                            <p id="degree-college" class="company">Govt. Model Engineering College, Thrikkakara, Ernakulam</p>
+                            <h4 id="degree-university" style="margin-top: 8px; font-weight: 500; color: var(--text-secondary);">Cochin University of Science and Technology</h4>
                         </div>
-                        <div class="experience-date">2008 - 2012</div>
+                        <div id="degree-duration" class="experience-date">2008 - 2012</div>
                     </div>
-                    <div class="experience-description">
-                        <p>Comprehensive graduate program in computer applications covering advanced topics in software engineering, database systems, algorithms, and enterprise application development.</p>
-                        <ul>
+                    <div id="degree-description" class="experience-description">
+                        <p id="degree-summary">Comprehensive graduate program in computer applications covering advanced topics in software engineering, database systems, algorithms, and enterprise application development.</p>
+                        <ul id="degree-highlights">
                             <li>Specialized in Software Engineering and Database Management Systems</li>
                             <li>Completed advanced coursework in Data Structures, Algorithms, and System Design</li>
                             <li>Developed multiple academic projects in Java, Python, and web technologies</li>
@@ -70,25 +70,25 @@
             <div id="certifications-section">
                 <h3 id="certifications-title" style="font-size: 1.5rem; margin-bottom: 30px; color: var(--primary-color);">Professional Certifications</h3>
                 <div id="certifications-grid" class="skills-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                    <div class="skill-card">
-                        <div class="skill-icon">
+                    <div id="cert-mongodb" class="skill-card">
+                        <div id="cert-mongodb-icon" class="skill-icon">
                             <i class="fas fa-database" style="font-size: 2.5rem; color: var(--primary-color);"></i>
                         </div>
-                        <h3>MongoDB Certified Developer</h3>
-                        <p>Professional certification demonstrating expertise in MongoDB database design, development, and administration. Proficient in NoSQL data modeling, aggregation pipelines, and performance optimization.</p>
-                        <div class="project-tags" style="margin-top: 15px;">
+                        <h3 id="cert-mongodb-title">MongoDB Certified Developer</h3>
+                        <p id="cert-mongodb-desc">Professional certification demonstrating expertise in MongoDB database design, development, and administration. Proficient in NoSQL data modeling, aggregation pipelines, and performance optimization.</p>
+                        <div id="cert-mongodb-tags" class="project-tags" style="margin-top: 15px;">
                             <span>MongoDB</span>
                             <span>NoSQL</span>
                             <span>Database Design</span>
                         </div>
                     </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">
+                    <div id="cert-nielit" class="skill-card">
+                        <div id="cert-nielit-icon" class="skill-icon">
                             <i class="fas fa-certificate" style="font-size: 2.5rem; color: var(--primary-color);"></i>
                         </div>
-                        <h3>NIELIT Certification</h3>
-                        <p>National Institute of Electronics and Information Technology certification validating technical competency in software development, programming, and IT infrastructure management.</p>
-                        <div class="project-tags" style="margin-top: 15px;">
+                        <h3 id="cert-nielit-title">NIELIT Certification</h3>
+                        <p id="cert-nielit-desc">National Institute of Electronics and Information Technology certification validating technical competency in software development, programming, and IT infrastructure management.</p>
+                        <div id="cert-nielit-tags" class="project-tags" style="margin-top: 15px;">
                             <span>Software Development</span>
                             <span>IT Infrastructure</span>
                             <span>Programming</span>
@@ -101,9 +101,9 @@
             <div id="continuous-learning-section" style="margin-top: 60px;">
                 <h3 id="continuous-learning-title" style="font-size: 1.5rem; margin-bottom: 30px; color: var(--primary-color);">Continuous Learning</h3>
                 <div id="continuous-learning-card" class="experience-card">
-                    <div class="experience-description">
-                        <p style="margin-bottom: 20px;">Committed to continuous professional development through ongoing learning and hands-on experience with emerging technologies:</p>
-                        <ul>
+                    <div id="continuous-learning-description" class="experience-description">
+                        <p id="continuous-learning-intro" style="margin-bottom: 20px;">Committed to continuous professional development through ongoing learning and hands-on experience with emerging technologies:</p>
+                        <ul id="continuous-learning-list">
                             <li><strong>AI/ML Technologies:</strong> Large Language Models (LLMs), Machine Learning frameworks, Natural Language Processing</li>
                             <li><strong>Cloud Platforms:</strong> AWS, Azure, Google Cloud Platform - architecture, deployment, and optimization</li>
                             <li><strong>Data Engineering:</strong> Apache Presto, Data Lakehouse architecture, ETL pipelines, Big Data processing</li>
@@ -119,16 +119,16 @@
             <div id="teaching-section" style="margin-top: 60px;">
                 <h3 id="teaching-title" style="font-size: 1.5rem; margin-bottom: 30px; color: var(--primary-color);">Teaching & Mentoring</h3>
                 <div id="teaching-card" class="experience-card">
-                    <div class="experience-header">
-                        <div>
-                            <h3 style="color: var(--text-color);">Training Faculty</h3>
-                            <p class="company">Centre for Development of Imaging Technology (C-DIT)</p>
+                    <div id="teaching-header" class="experience-header">
+                        <div id="teaching-info">
+                            <h3 id="teaching-role" style="color: var(--text-color);">Training Faculty</h3>
+                            <p id="teaching-organization" class="company">Centre for Development of Imaging Technology (C-DIT)</p>
                         </div>
-                        <div class="experience-date">Nov 2013 - Apr 2015</div>
+                        <div id="teaching-duration" class="experience-date">Nov 2013 - Apr 2015</div>
                     </div>
-                    <div class="experience-description">
-                        <p>Delivered comprehensive technical training programs in software development, programming languages, and IT fundamentals to students and professionals.</p>
-                        <ul>
+                    <div id="teaching-description" class="experience-description">
+                        <p id="teaching-summary">Delivered comprehensive technical training programs in software development, programming languages, and IT fundamentals to students and professionals.</p>
+                        <ul id="teaching-highlights">
                             <li>Conducted training sessions on Java, Python, Web Development, and Database Management</li>
                             <li>Developed curriculum and course materials for various technical programs</li>
                             <li>Mentored students on real-world projects and industry best practices</li>

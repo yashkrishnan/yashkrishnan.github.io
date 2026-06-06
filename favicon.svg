@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <path d="M 0,30 C 0,13.4 13.4,0 30,0 L 70,0 C 86.6,0 100,13.4 100,30 L 100,70 C 100,86.6 86.6,100 70,100 L 30,100 C 13.4,100 0,86.6 0,70 Z" fill="#0f62fe"/>
+  <text x="50" y="70" font-family="IBM Plex Sans, Arial, sans-serif" font-size="60" font-weight="700" fill="white" text-anchor="middle">YK</text>
+</svg>
+
+<!-- Made with Bob -->

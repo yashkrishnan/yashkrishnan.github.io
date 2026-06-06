@@ -305,3 +305,40 @@ window.addEventListener('load', () => {
 
 // Development log for successful script initialization
 console.log('Personal website loaded successfully! 🚀');
+// ========================================
+// DARK/LIGHT THEME TOGGLE
+// Implements theme switching with localStorage persistence
+// Detects system preference and allows manual override
+// ========================================
+
+// Check for saved theme preference or default to system preference
+const getPreferredTheme = () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        return savedTheme;
+    }
+    // Check system preference
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+};
+
+// Set theme on page load
+const setTheme = (theme) => {
+    document.body.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+};
+
+// Initialize theme on page load
+setTheme(getPreferredTheme());
+
+// Theme toggle button functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+        });
+    }
+});

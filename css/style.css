@@ -51,6 +51,50 @@
 }
 
 /* ========================================
+   DARK THEME
+   IBM Carbon dark theme color tokens
+   Applied when [data-theme="dark"] attribute is set on body
+   ======================================== */
+[data-theme="dark"] {
+    /* Primary Brand Colors - Adjusted for dark mode */
+    --primary-color: #78a9ff;
+    --primary-hover: #a6c8ff;
+    --secondary-color: #f4f4f4;
+    
+    /* Text Colors - Light text on dark backgrounds */
+    --text-color: #f4f4f4;
+    --text-secondary: #c6c6c6;
+    --text-light: #a8a8a8;
+    --text-primary: #f4f4f4;
+    
+    /* Background Colors - Dark backgrounds */
+    --bg-color: #161616;
+    --bg-light: #262626;
+    --bg-dark: #000000;
+    --background-secondary: #262626;
+    
+    /* Border and UI Colors - Dark theme UI tokens */
+    --border-color: #393939;
+    --ui-01: #262626;          /* Dark background layer 1 */
+    --ui-02: #393939;          /* Dark background layer 2 */
+    --ui-03: #525252;          /* Dark border */
+    --ui-04: #8d8d8d;          /* Medium gray (unchanged) */
+    --ui-05: #f4f4f4;          /* Light text */
+    
+    /* Interactive States - Adjusted for dark mode */
+    --interactive: #78a9ff;
+    --hover-ui: #353535;
+    --active-ui: #525252;
+    
+    /* Shadows and Effects - Lighter shadows for dark mode */
+    --shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.3);
+    
+    /* Component-specific - Dark card backgrounds */
+    --card-bg: #262626;
+}
+
+/* ========================================
    RESET & BASE STYLES
    Global resets and foundational styles
    ======================================== */
@@ -176,6 +220,50 @@ section {
 .nav-links a:hover::after,
 .nav-links a.active::after {
     width: 100%;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    background: none;
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    margin-left: 20px;
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.theme-toggle:hover {
+    background: var(--hover-ui);
+    border-color: var(--primary-color);
+    transform: rotate(15deg);
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+
+/* Hide sun icon in light mode, moon icon in dark mode */
+.theme-toggle .fa-sun {
+    display: none;
+}
+
+.theme-toggle .fa-moon {
+    display: block;
+}
+
+[data-theme="dark"] .theme-toggle .fa-sun {
+    display: block;
+}
+
+[data-theme="dark"] .theme-toggle .fa-moon {
+    display: none;
 }
 
 .hamburger {

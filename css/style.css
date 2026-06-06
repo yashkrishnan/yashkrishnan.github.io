@@ -1,99 +1,137 @@
-/* ===== IBM Carbon Design System Variables ===== */
+/* ============================================
+   PERSONAL WEBSITE - MAIN STYLESHEET
+   Based on IBM Carbon Design System
+   ============================================ */
+
+/* ========================================
+   CSS CUSTOM PROPERTIES (VARIABLES)
+   IBM Carbon Design System color palette
+   and design tokens for consistent theming
+   ======================================== */
 :root {
-    /* IBM Carbon Colors */
+    /* Primary Brand Colors */
     --primary-color: #0f62fe;
     --primary-hover: #0353e9;
     --secondary-color: #393939;
+    
+    /* Text Colors */
     --text-color: #161616;
     --text-secondary: #525252;
     --text-light: #4d5358;
+    --text-primary: #161616;
+    
+    /* Background Colors */
     --bg-color: #ffffff;
     --bg-light: #f4f4f4;
     --bg-dark: #161616;
+    --background-secondary: #e8e8e8;
+    
+    /* Border and UI Colors */
     --border-color: #e0e0e0;
-    --ui-01: #f4f4f4;
-    --ui-02: #ffffff;
-    --ui-03: #e0e0e0;
-    --ui-04: #8d8d8d;
-    --ui-05: #161616;
+    --ui-01: #f4f4f4;          /* Light background */
+    --ui-02: #ffffff;          /* White background */
+    --ui-03: #e0e0e0;          /* Light border */
+    --ui-04: #8d8d8d;          /* Medium gray */
+    --ui-05: #161616;          /* Dark background */
+    
+    /* Interactive States */
     --interactive: #0f62fe;
     --hover-ui: #e8e8e8;
     --active-ui: #c6c6c6;
+    
+    /* Shadows and Effects */
     --shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    /* Transitions - IBM Carbon motion tokens */
     --transition: all 0.11s cubic-bezier(0.2, 0, 0.38, 0.9);
+    
+    /* Component-specific */
     --card-bg: #ffffff;
-    --text-primary: #161616;
-    --background-secondary: #e8e8e8;
 }
 
-/* ===== Reset & Base Styles ===== */
+/* ========================================
+   RESET & BASE STYLES
+   Global resets and foundational styles
+   ======================================== */
+/* Universal box-sizing and reset */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;  /* Include padding and border in element width */
 }
 
+/* Root HTML element */
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;  /* Smooth scrolling for anchor links */
     background: var(--ui-05);
 }
 
+/* Body element with IBM Plex Sans font stack */
 body {
     font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.5;
     color: var(--text-color);
-    background: linear-gradient(90deg, #0f172a 0%, #10192f 55%, #0b1220 100%);
+    background: linear-gradient(90deg, #0f172a 0%, #10192f 55%, #0b1220 100%);  /* Dark gradient background */
     background-repeat: no-repeat;
     background-size: 100% 100%;
     min-height: 100vh;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;      /* Smooth fonts on macOS */
+    -moz-osx-font-smoothing: grayscale;       /* Smooth fonts on Firefox */
 }
 
+/* Container for centered content with max-width */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 1200px;  /* Maximum content width */
+    margin: 0 auto;     /* Center horizontally */
+    padding: 0 20px;    /* Horizontal padding for mobile */
 }
 
+/* Default section spacing and color */
 section {
-    padding: 80px 0;
-    color: var(--ui-02);
+    padding: 80px 0;        /* Vertical spacing between sections */
+    color: var(--ui-02);    /* Light text color for dark background */
 }
 
+/* Section title styling with underline accent */
 .section-title {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 50px;
     color: var(--ui-02);
-    position: relative;
+    position: relative;  /* For ::after pseudo-element positioning */
 }
 
+/* Decorative underline for section titles */
 .section-title::after {
     content: '';
     display: block;
     width: 60px;
     height: 2px;
-    background: var(--primary-color);
-    margin: 16px auto 0;
+    background: var(--primary-color);  /* Blue accent line */
+    margin: 16px auto 0;               /* Centered below title */
 }
 
-/* ===== Navigation ===== */
+/* ========================================
+   NAVIGATION BAR
+   Fixed header with responsive menu
+   ======================================== */
+/* Fixed navigation bar */
 .navbar {
-    position: fixed;
+    position: fixed;                    /* Stay at top during scroll */
     top: 0;
     left: 0;
     right: 0;
     background: var(--ui-02);
     border-bottom: 1px solid var(--ui-03);
-    z-index: 1000;
-    transition: var(--transition);
+    z-index: 1000;                      /* Above all other content */
+    transition: var(--transition);      /* Smooth background changes */
 }
 
+/* Navigation container layout */
 .navbar .container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end;  /* Align nav items to right */
     align-items: center;
     padding: 20px;
 }

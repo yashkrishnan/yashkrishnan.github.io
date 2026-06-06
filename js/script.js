@@ -1,25 +1,43 @@
+// ============================================
+// PERSONAL WEBSITE - MAIN JAVASCRIPT
+// Core functionality for interactive features
+// ============================================
+
+// ========================================
+// DYNAMIC YEAR UPDATE
+// Automatically updates copyright year across all pages
+// ========================================
 const currentYear = new Date().getFullYear();
 document.querySelectorAll('[data-current-year]').forEach((element) => {
     element.textContent = currentYear;
 });
 
-// ===== Calculate Years of Experience =====
-const FIRST_EXPERIENCE_YEAR = 2013; // February 2013 - Solutions Infotech
+// ========================================
+// YEARS OF EXPERIENCE CALCULATION
+// Dynamically calculates and displays years of experience
+// Based on first professional role start date
+// ========================================
+const FIRST_EXPERIENCE_YEAR = 2013; // Start date: February 2013 - Solutions Infotech
 const yearsOfExperience = currentYear - FIRST_EXPERIENCE_YEAR;
 
 document.querySelectorAll('[data-years-experience]').forEach((element) => {
     element.textContent = yearsOfExperience;
 });
 
-// ===== Mobile Navigation Toggle =====
+// ========================================
+// MOBILE NAVIGATION TOGGLE
+// Handles hamburger menu functionality
+// Includes icon animation and menu state management
+// ========================================
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
 if (hamburger && navLinks) {
+    // Toggle menu visibility on hamburger click
     hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('active');
         
-        // Animate hamburger icon
+        // Animate hamburger icon to X shape when menu is open
         const spans = hamburger.querySelectorAll('span');
         spans[0].style.transform = navLinks.classList.contains('active')
             ? 'rotate(45deg) translate(5px, 5px)'
@@ -30,12 +48,12 @@ if (hamburger && navLinks) {
             : 'rotate(0) translate(0, 0)';
     });
 
-    // Close mobile menu when clicking on a link
+    // Auto-close mobile menu when user clicks a navigation link
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
             
-            // Reset hamburger icon
+            // Reset hamburger icon to original state
             const spans = hamburger.querySelectorAll('span');
             spans[0].style.transform = 'rotate(0) translate(0, 0)';
             spans[1].style.opacity = '1';
@@ -44,13 +62,17 @@ if (hamburger && navLinks) {
     });
 }
 
-// ===== Smooth Scrolling for Navigation Links =====
+// ========================================
+// SMOOTH SCROLLING
+// Enables smooth scroll behavior for anchor links
+// Accounts for fixed navbar height
+// ========================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            const offsetTop = target.offsetTop - 70; // Account for fixed navbar
+            const offsetTop = target.offsetTop - 70; // Offset for fixed navbar (70px)
             window.scrollTo({
                 top: offsetTop,
                 behavior: 'smooth'
@@ -59,7 +81,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ===== Navbar Background on Scroll =====
+// ========================================
+// NAVBAR SCROLL EFFECT
+// Changes navbar background opacity and shadow on scroll
+// Provides visual feedback for page position
+// ========================================
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
@@ -70,10 +96,14 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// ===== Scroll Reveal Animation =====
+// ========================================
+// SCROLL REVEAL ANIMATION
+// Animates elements as they enter viewport
+// Uses Intersection Observer API for performance
+// ========================================
 const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: 0.1,              // Trigger when 10% of element is visible
+    rootMargin: '0px 0px -50px 0px'  // Start animation 50px before element enters viewport
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -85,29 +115,34 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe all sections and cards - with mobile-friendly fallback
+// Observe all sections and cards with mobile-friendly fallback
+// Prevents blank pages on mobile by skipping animation on small screens
 document.querySelectorAll('section, .skill-card, .project-card, .stat').forEach(el => {
-    // Only apply animation on larger screens to avoid blank pages on mobile
+    // Only apply animation on screens wider than 768px
     if (window.innerWidth > 768) {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
     } else {
-        // On mobile, ensure elements are visible immediately
+        // On mobile devices, show elements immediately without animation
         el.style.opacity = '1';
         el.style.transform = 'translateY(0)';
     }
 });
 
-// ===== Contact Form Handling =====
+// ========================================
+// CONTACT FORM HANDLING
+// Processes contact form submissions
+// Currently shows alert, can be extended for API integration
+// ========================================
 const contactForm = document.querySelector('.contact-form');
 
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        // Get form data
+        // Extract form field values
         const formData = {
             name: document.getElementById('name').value,
             email: document.getElementById('email').value,
@@ -115,20 +150,23 @@ if (contactForm) {
             message: document.getElementById('message').value
         };
         
-        // Here you would typically send the data to a server
-        // For now, we'll just show a success message
+        // TODO: Integrate with backend API or email service
+        // Currently logs to console for development
         console.log('Form submitted:', formData);
         
-        // Show success message
+        // Display success notification to user
         alert('Thank you for your message! I will get back to you soon.');
         
-        // Reset form
+        // Clear all form fields after submission
         contactForm.reset();
     });
 }
 
-// ===== Typing Effect for Hero Title =====
-// Disabled to preserve HTML formatting in the title
+// ========================================
+// TYPING EFFECT FOR HERO TITLE
+// Feature disabled to preserve HTML formatting
+// Can be re-enabled if plain text title is used
+// ========================================
 // const heroTitle = document.querySelector('.hero-title');
 // if (heroTitle) {
 //     const text = heroTitle.innerHTML;
@@ -147,7 +185,11 @@ if (contactForm) {
 //     setTimeout(typeWriter, 500);
 // }
 
-// ===== Active Navigation Link Highlighting =====
+// ========================================
+// ACTIVE NAVIGATION LINK HIGHLIGHTING
+// Highlights current section in navigation menu
+// Updates based on scroll position
+// ========================================
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section[id]');
     const scrollY = window.pageYOffset;
@@ -166,10 +208,17 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// ===== Parallax Effect for Hero Section =====
-// Disabled to avoid exposing white gaps during scroll on the homepage layout.
+// ========================================
+// PARALLAX EFFECT FOR HERO SECTION
+// Feature disabled to prevent layout issues
+// Avoids white gaps during scroll on homepage
+// ========================================
 
-// ===== Add hover effect to project cards =====
+// ========================================
+// PROJECT CARDS HOVER EFFECT
+// Adds lift and scale animation on hover
+// Provides visual feedback for interactive elements
+// ========================================
 document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('mouseenter', function() {
         this.style.transform = 'translateY(-10px) scale(1.02)';
@@ -180,7 +229,11 @@ document.querySelectorAll('.project-card').forEach(card => {
     });
 });
 
-// ===== Skill cards animation on hover =====
+// ========================================
+// SKILL CARDS HOVER ANIMATION
+// Animates skill icons on hover
+// Adds scale and rotation for visual interest
+// ========================================
 document.querySelectorAll('.skill-card').forEach(card => {
     card.addEventListener('mouseenter', function() {
         const icon = this.querySelector('i');
@@ -194,10 +247,20 @@ document.querySelectorAll('.skill-card').forEach(card => {
     });
 });
 
-// ===== Counter Animation for Stats =====
+// ========================================
+// COUNTER ANIMATION FOR STATISTICS
+// Animates numbers counting up from 0 to target value
+// Triggered when stats section enters viewport
+// ========================================
+/**
+ * Animates a counter from 0 to target value
+ * @param {HTMLElement} element - Element to update with counter value
+ * @param {number} target - Final counter value
+ * @param {number} duration - Animation duration in milliseconds (default: 2000ms)
+ */
 function animateCounter(element, target, duration = 2000) {
     let start = 0;
-    const increment = target / (duration / 16);
+    const increment = target / (duration / 16); // 16ms per frame (60fps)
     
     const timer = setInterval(() => {
         start += increment;
@@ -210,7 +273,8 @@ function animateCounter(element, target, duration = 2000) {
     }, 16);
 }
 
-// Observe stats for counter animation
+// Intersection Observer for triggering counter animations
+// Ensures animation only runs once when stats become visible
 const statsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -226,7 +290,11 @@ document.querySelectorAll('.stat').forEach(stat => {
     statsObserver.observe(stat);
 });
 
-// ===== Add loading animation =====
+// ========================================
+// PAGE LOAD ANIMATION
+// Fades in page content on initial load
+// Provides smooth entry experience
+// ========================================
 window.addEventListener('load', () => {
     document.body.style.opacity = '0';
     setTimeout(() => {
@@ -235,4 +303,5 @@ window.addEventListener('load', () => {
     }, 100);
 });
 
+// Development log for successful script initialization
 console.log('Personal website loaded successfully! 🚀');

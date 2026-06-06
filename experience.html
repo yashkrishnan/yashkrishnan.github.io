@@ -16,7 +16,7 @@
 <body>
     <!-- Navigation -->
     <nav id="main-navigation" class="navbar">
-        <div class="container">
+        <div id="nav-container" class="container">
             <ul id="nav-menu" class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -26,7 +26,7 @@
                 <li><a href="education.html">Education</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="hamburger">
+            <div id="hamburger-menu" class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -36,21 +36,21 @@
 
     <!-- Work Experience Section -->
     <section id="experience-section" class="about" style="padding-top: 120px;">
-        <div class="container">
+        <div id="experience-container" class="container">
             <h2 id="experience-title" class="section-title">Work Experience</h2>
             <div id="experience-intro" class="about-text" style="text-align: center; margin-bottom: 40px;">
-                <p>Professional journey building scalable systems and leading engineering teams.</p>
+                <p id="experience-intro-text">Professional journey building scalable systems and leading engineering teams.</p>
             </div>
-            <div class="skills-grid" style="grid-template-columns: 1fr; max-width: 900px; margin: 0 auto; gap: 30px;">
-                <div class="skill-card" style="text-align: left; padding: 30px; border: 2px solid var(--primary-color);">
-                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 15px;">
-                        <div>
-                            <h3 style="color: var(--primary-color); margin-bottom: 5px;">Senior Software Engineer / Team Lead</h3>
-                            <p style="font-size: 1.1rem; font-weight: 500; margin-bottom: 5px;">IBM (WatsonX.Data)</p>
+            <div id="experience-grid" class="skills-grid" style="grid-template-columns: 1fr; max-width: 900px; margin: 0 auto; gap: 30px;">
+                <div id="job-ibm" class="skill-card" style="text-align: left; padding: 30px; border: 2px solid var(--primary-color);">
+                    <div id="job-ibm-header" style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 15px;">
+                        <div id="job-ibm-info">
+                            <h3 id="job-ibm-title" style="color: var(--primary-color); margin-bottom: 5px;">Senior Software Engineer / Team Lead</h3>
+                            <p id="job-ibm-company" style="font-size: 1.1rem; font-weight: 500; margin-bottom: 5px;">IBM (WatsonX.Data)</p>
                         </div>
-                        <span style="color: var(--text-secondary); font-weight: 500; white-space: nowrap;"><span style="display: none;">Dec </span>2023 – Present</span>
+                        <span id="job-ibm-duration" style="color: var(--text-secondary); font-weight: 500; white-space: nowrap;"><span style="display: none;">Dec </span>2023 – Present</span>
                     </div>
-                    <ul style="list-style: none; padding: 0; margin: 15px 0 0 0;">
+                    <ul id="job-ibm-responsibilities" style="list-style: none; padding: 0; margin: 15px 0 0 0;">
                         <li style="margin-bottom: 10px; padding-left: 20px; position: relative;">
                             <span style="position: absolute; left: 0; color: var(--primary-color);">•</span>
                             Leading Serviceability team and Presto query engine development for IBM's enterprise data lakehouse platform
@@ -81,15 +81,15 @@
                         </li>
                     </ul>
                 </div>
-                <div class="skill-card" style="text-align: left; padding: 30px;">
-                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 15px;">
-                        <div>
-                            <h3 style="margin-bottom: 5px;">Senior Software Engineer</h3>
-                            <p style="font-size: 1.1rem; font-weight: 500; margin-bottom: 5px;">Litmus7</p>
+                <div id="job-litmus7" class="skill-card" style="text-align: left; padding: 30px;">
+                    <div id="job-litmus7-header" style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 15px;">
+                        <div id="job-litmus7-info">
+                            <h3 id="job-litmus7-title" style="margin-bottom: 5px;">Senior Software Engineer</h3>
+                            <p id="job-litmus7-company" style="font-size: 1.1rem; font-weight: 500; margin-bottom: 5px;">Litmus7</p>
                         </div>
-                        <span style="color: var(--text-secondary); font-weight: 500; white-space: nowrap;"><span style="display: none;">Aug </span>2019 – <span style="display: none;">Nov </span>2023</span>
+                        <span id="job-litmus7-duration" style="color: var(--text-secondary); font-weight: 500; white-space: nowrap;"><span style="display: none;">Aug </span>2019 – <span style="display: none;">Nov </span>2023</span>
                     </div>
-                    <ul style="list-style: none; padding: 0; margin: 15px 0 0 0;">
+                    <ul id="job-litmus7-responsibilities" style="list-style: none; padding: 0; margin: 15px 0 0 0;">
                         <li style="margin-bottom: 10px; padding-left: 20px; position: relative;">
                             <span style="position: absolute; left: 0; color: var(--primary-color);">•</span>
                             Architected and developed scalable microservices using Java, Spring Boot, and Dropwizard frameworks
@@ -120,15 +120,15 @@
                         </li>
                     </ul>
                 </div>
-                <div class="skill-card" style="text-align: left; padding: 30px;">
-                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 15px;">
-                        <div>
-                            <h3 style="margin-bottom: 5px;">Software Engineer</h3>
-                            <p style="font-size: 1.1rem; font-weight: 500; margin-bottom: 5px;">LuLu International Exchange / Pearl Data Direct</p>
+                <div id="job-lulu" class="skill-card" style="text-align: left; padding: 30px;">
+                    <div id="job-lulu-header" style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 15px;">
+                        <div id="job-lulu-info">
+                            <h3 id="job-lulu-title" style="margin-bottom: 5px;">Software Engineer</h3>
+                            <p id="job-lulu-company" style="font-size: 1.1rem; font-weight: 500; margin-bottom: 5px;">LuLu International Exchange / Pearl Data Direct</p>
                         </div>
-                        <span style="color: var(--text-secondary); font-weight: 500; white-space: nowrap;"><span style="display: none;">Jun </span>2018 – <span style="display: none;">Aug </span>2019</span>
+                        <span id="job-lulu-duration" style="color: var(--text-secondary); font-weight: 500; white-space: nowrap;"><span style="display: none;">Jun </span>2018 – <span style="display: none;">Aug </span>2019</span>
                     </div>
-                    <ul style="list-style: none; padding: 0; margin: 15px 0 0 0;">
+                    <ul id="job-lulu-responsibilities" style="list-style: none; padding: 0; margin: 15px 0 0 0;">
                         <li style="margin-bottom: 10px; padding-left: 20px; position: relative;">
                             <span style="position: absolute; left: 0; color: var(--primary-color);">•</span>
                             Developed backend microservices for international money transfer and financial systems using Java and Spring Boot
@@ -163,15 +163,15 @@
                         </li>
                     </ul>
                 </div>
-                <div class="skill-card" style="text-align: left; padding: 30px;">
-                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 15px;">
-                        <div>
-                            <h3 style="margin-bottom: 5px;">Software Engineer</h3>
-                            <p style="font-size: 1.1rem; font-weight: 500; margin-bottom: 5px;">Instio</p>
+                <div id="job-instio" class="skill-card" style="text-align: left; padding: 30px;">
+                    <div id="job-instio-header" style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 15px;">
+                        <div id="job-instio-info">
+                            <h3 id="job-instio-title" style="margin-bottom: 5px;">Software Engineer</h3>
+                            <p id="job-instio-company" style="font-size: 1.1rem; font-weight: 500; margin-bottom: 5px;">Instio</p>
                         </div>
-                        <span style="color: var(--text-secondary); font-weight: 500; white-space: nowrap;"><span style="display: none;">Jan </span>2017 – <span style="display: none;">Jun </span>2018</span>
+                        <span id="job-instio-duration" style="color: var(--text-secondary); font-weight: 500; white-space: nowrap;"><span style="display: none;">Jan </span>2017 – <span style="display: none;">Jun </span>2018</span>
                     </div>
-                    <ul style="list-style: none; padding: 0; margin: 15px 0 0 0;">
+                    <ul id="job-instio-responsibilities" style="list-style: none; padding: 0; margin: 15px 0 0 0;">
                         <li style="margin-bottom: 10px; padding-left: 20px; position: relative;">
                             <span style="position: absolute; left: 0; color: var(--primary-color);">•</span>
                             Architected and developed guest experience management platform for hospitality industry
@@ -194,15 +194,15 @@
                         </li>
                     </ul>
                 </div>
-                <div class="skill-card" style="text-align: left; padding: 30px;">
-                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 15px;">
-                        <div>
-                            <h3 style="margin-bottom: 5px;">Senior Software Engineer</h3>
-                            <p style="font-size: 1.1rem; font-weight: 500; margin-bottom: 5px;">Dexlock Technologies</p>
+                <div id="job-dexlock" class="skill-card" style="text-align: left; padding: 30px;">
+                    <div id="job-dexlock-header" style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 15px;">
+                        <div id="job-dexlock-info">
+                            <h3 id="job-dexlock-title" style="margin-bottom: 5px;">Senior Software Engineer</h3>
+                            <p id="job-dexlock-company" style="font-size: 1.1rem; font-weight: 500; margin-bottom: 5px;">Dexlock Technologies</p>
                         </div>
-                        <span style="color: var(--text-secondary); font-weight: 500; white-space: nowrap;"><span style="display: none;">Jan </span>2015 – <span style="display: none;">Dec </span>2016</span>
+                        <span id="job-dexlock-duration" style="color: var(--text-secondary); font-weight: 500; white-space: nowrap;"><span style="display: none;">Jan </span>2015 – <span style="display: none;">Dec </span>2016</span>
                     </div>
-                    <ul style="list-style: none; padding: 0; margin: 15px 0 0 0;">
+                    <ul id="job-dexlock-responsibilities" style="list-style: none; padding: 0; margin: 15px 0 0 0;">
                         <li style="margin-bottom: 10px; padding-left: 20px; position: relative;">
                             <span style="position: absolute; left: 0; color: var(--primary-color);">•</span>
                             Led development of document extraction system using LLMs and custom semantic matcher (Mandrake)
@@ -229,15 +229,15 @@
                         </li>
                     </ul>
                 </div>
-                <div class="skill-card" style="text-align: left; padding: 30px;">
-                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 15px;">
-                        <div>
-                            <h3 style="margin-bottom: 5px;">Associate Software Engineer</h3>
-                            <p style="font-size: 1.1rem; font-weight: 500; margin-bottom: 5px;">Solutions Infotech</p>
+                <div id="job-solutions" class="skill-card" style="text-align: left; padding: 30px;">
+                    <div id="job-solutions-header" style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 15px;">
+                        <div id="job-solutions-info">
+                            <h3 id="job-solutions-title" style="margin-bottom: 5px;">Associate Software Engineer</h3>
+                            <p id="job-solutions-company" style="font-size: 1.1rem; font-weight: 500; margin-bottom: 5px;">Solutions Infotech</p>
                         </div>
-                        <span style="color: var(--text-secondary); font-weight: 500; white-space: nowrap;"><span style="display: none;">Feb </span>2013 – <span style="display: none;">Jan </span>2015</span>
+                        <span id="job-solutions-duration" style="color: var(--text-secondary); font-weight: 500; white-space: nowrap;"><span style="display: none;">Feb </span>2013 – <span style="display: none;">Jan </span>2015</span>
                     </div>
-                    <ul style="list-style: none; padding: 0; margin: 15px 0 0 0;">
+                    <ul id="job-solutions-responsibilities" style="list-style: none; padding: 0; margin: 15px 0 0 0;">
                         <li style="margin-bottom: 10px; padding-left: 20px; position: relative;">
                             <span style="position: absolute; left: 0; color: var(--primary-color);">•</span>
                             Developed native Android applications using Java and Android SDK
@@ -266,18 +266,18 @@
             <div id="parttime-experience-section" style="margin-top: 60px;">
                 <h2 id="parttime-title" class="section-title">Part-time Experience</h2>
                 <div id="parttime-intro" class="about-text" style="text-align: center; margin-bottom: 40px;">
-                    <p>Additional professional engagements and training roles.</p>
+                    <p id="parttime-intro-text">Additional professional engagements and training roles.</p>
                 </div>
-                <div class="skills-grid" style="grid-template-columns: 1fr; max-width: 900px; margin: 0 auto; gap: 30px;">
-                    <div class="skill-card" style="text-align: left; padding: 30px;">
-                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 15px;">
-                            <div>
-                                <h3 style="margin-bottom: 5px;">Visiting Training Faculty (Part-time)</h3>
-                                <p style="font-size: 1.1rem; font-weight: 500; margin-bottom: 5px;">Centre for Development of Imaging Technology</p>
+                <div id="parttime-grid" class="skills-grid" style="grid-template-columns: 1fr; max-width: 900px; margin: 0 auto; gap: 30px;">
+                    <div id="job-cdit" class="skill-card" style="text-align: left; padding: 30px;">
+                        <div id="job-cdit-header" style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 15px;">
+                            <div id="job-cdit-info">
+                                <h3 id="job-cdit-title" style="margin-bottom: 5px;">Visiting Training Faculty (Part-time)</h3>
+                                <p id="job-cdit-company" style="font-size: 1.1rem; font-weight: 500; margin-bottom: 5px;">Centre for Development of Imaging Technology</p>
                             </div>
-                            <span style="color: var(--text-secondary); font-weight: 500; white-space: nowrap;"><span style="display: none;">Nov </span>2013 – <span style="display: none;">Apr </span>2015</span>
+                            <span id="job-cdit-duration" style="color: var(--text-secondary); font-weight: 500; white-space: nowrap;"><span style="display: none;">Nov </span>2013 – <span style="display: none;">Apr </span>2015</span>
                         </div>
-                        <ul style="list-style: none; padding: 0; margin: 15px 0 0 0;">
+                        <ul id="job-cdit-responsibilities" style="list-style: none; padding: 0; margin: 15px 0 0 0;">
                             <li style="padding-left: 20px; position: relative;">
                                 <span style="position: absolute; left: 0; color: var(--primary-color);">•</span>
                                 Android Trainer - Teaching mobile application development

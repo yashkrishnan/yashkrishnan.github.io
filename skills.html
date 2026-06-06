@@ -16,7 +16,7 @@
 <body>
     <!-- Navigation -->
     <nav id="main-navigation" class="navbar">
-        <div class="container">
+        <div id="nav-container" class="container">
             <ul id="nav-menu" class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -26,7 +26,7 @@
                 <li><a href="education.html">Education</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="hamburger">
+            <div id="hamburger-menu" class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -36,35 +36,35 @@
 
     <!-- Skills Section -->
     <section id="skills-section" class="skills" style="padding-top: 120px;">
-        <div class="container">
+        <div id="skills-container" class="container">
             <h2 id="skills-title" class="section-title">Technical Skills</h2>
             <div id="skills-intro" class="about-text" style="text-align: center; margin-bottom: 40px;">
-                <p>Comprehensive technical expertise across programming languages, frameworks, cloud platforms, and modern development tools.</p>
+                <p id="skills-intro-text">Comprehensive technical expertise across programming languages, frameworks, cloud platforms, and modern development tools.</p>
             </div>
 
             <!-- Programming Languages -->
             <div id="programming-languages-section" style="margin-bottom: 50px;">
                 <h3 id="programming-languages-title" style="font-size: 1.5rem; margin-bottom: 25px; color: var(--primary-color); text-align: center;">Programming Languages</h3>
                 <div id="programming-languages-grid" class="skills-grid">
-                    <div class="skill-card">
+                    <div id="skill-java" class="skill-card">
                         <i class="fab fa-java" style="font-size: 3rem; color: var(--primary-color);"></i>
-                        <h3>Java</h3>
-                        <p>Spring Boot, Dropwizard, Microservices</p>
+                        <h3 id="skill-java-title">Java</h3>
+                        <p id="skill-java-desc">Spring Boot, Dropwizard, Microservices</p>
                     </div>
-                    <div class="skill-card">
+                    <div id="skill-python" class="skill-card">
                         <i class="fab fa-python" style="font-size: 3rem; color: var(--primary-color);"></i>
-                        <h3>Python</h3>
-                        <p>Django, Data Analytics, NLP, ML</p>
+                        <h3 id="skill-python-title">Python</h3>
+                        <p id="skill-python-desc">Django, Data Analytics, NLP, ML</p>
                     </div>
-                    <div class="skill-card">
+                    <div id="skill-javascript" class="skill-card">
                         <i class="fab fa-js" style="font-size: 3rem; color: var(--primary-color);"></i>
-                        <h3>JavaScript</h3>
-                        <p>Node.js, React, jQuery</p>
+                        <h3 id="skill-javascript-title">JavaScript</h3>
+                        <p id="skill-javascript-desc">Node.js, React, jQuery</p>
                     </div>
-                    <div class="skill-card">
+                    <div id="skill-go" class="skill-card">
                         <i class="fab fa-golang" style="font-size: 3rem; color: var(--primary-color);"></i>
-                        <h3>Go</h3>
-                        <p>Concurrent Programming, Microservices</p>
+                        <h3 id="skill-go-title">Go</h3>
+                        <p id="skill-go-desc">Concurrent Programming, Microservices</p>
                     </div>
                 </div>
             </div>
@@ -73,30 +73,30 @@
             <div id="aiml-section" style="margin-bottom: 50px;">
                 <h3 id="aiml-title" style="font-size: 1.5rem; margin-bottom: 25px; color: var(--primary-color); text-align: center;">AI/ML & Data Science</h3>
                 <div id="aiml-grid" class="skills-grid">
-                    <div class="skill-card">
+                    <div id="skill-nlp" class="skill-card">
                         <i class="fas fa-brain" style="font-size: 3rem; color: var(--primary-color);"></i>
-                        <h3>NLP</h3>
-                        <p>Named Entity Recognition, POS Tagging, Parsing, Stanford CoreNLP</p>
+                        <h3 id="skill-nlp-title">NLP</h3>
+                        <p id="skill-nlp-desc">Named Entity Recognition, POS Tagging, Parsing, Stanford CoreNLP</p>
                     </div>
-                    <div class="skill-card">
+                    <div id="skill-ml" class="skill-card">
                         <i class="fas fa-robot" style="font-size: 3rem; color: var(--primary-color);"></i>
-                        <h3>Machine Learning</h3>
-                        <p>LLMs, Sentiment Analysis, Predictive Modeling</p>
+                        <h3 id="skill-ml-title">Machine Learning</h3>
+                        <p id="skill-ml-desc">LLMs, Sentiment Analysis, Predictive Modeling</p>
                     </div>
-                    <div class="skill-card">
+                    <div id="skill-image-processing" class="skill-card">
                         <i class="fas fa-image" style="font-size: 3rem; color: var(--primary-color);"></i>
-                        <h3>Image Processing</h3>
-                        <p>OCR, Computer Vision, Document Extraction</p>
+                        <h3 id="skill-image-processing-title">Image Processing</h3>
+                        <p id="skill-image-processing-desc">OCR, Computer Vision, Document Extraction</p>
                     </div>
-                    <div class="skill-card">
+                    <div id="skill-data-analytics" class="skill-card">
                         <i class="fas fa-chart-line" style="font-size: 3rem; color: var(--primary-color);"></i>
-                        <h3>Data Analytics</h3>
-                        <p>Business Intelligence, Reporting, Dashboards</p>
+                        <h3 id="skill-data-analytics-title">Data Analytics</h3>
+                        <p id="skill-data-analytics-desc">Business Intelligence, Reporting, Dashboards</p>
                     </div>
-                    <div class="skill-card">
+                    <div id="skill-ai-platforms" class="skill-card">
                         <i class="fas fa-microchip" style="font-size: 3rem; color: var(--primary-color);"></i>
-                        <h3>AI Platforms</h3>
-                        <p>IBM WatsonX, LLM Integration, AI Workloads</p>
+                        <h3 id="skill-ai-platforms-title">AI Platforms</h3>
+                        <p id="skill-ai-platforms-desc">IBM WatsonX, LLM Integration, AI Workloads</p>
                     </div>
                 </div>
             </div>
@@ -105,35 +105,35 @@
             <div id="frameworks-section" style="margin-bottom: 50px;">
                 <h3 id="frameworks-title" style="font-size: 1.5rem; margin-bottom: 25px; color: var(--primary-color); text-align: center;">Frameworks & Architecture</h3>
                 <div id="frameworks-grid" class="skills-grid">
-                    <div class="skill-card">
+                    <div id="skill-microservices" class="skill-card">
                         <i class="fas fa-project-diagram" style="font-size: 3rem; color: var(--primary-color);"></i>
-                        <h3>Microservices</h3>
-                        <p>Distributed Systems, Event-driven Architecture</p>
+                        <h3 id="skill-microservices-title">Microservices</h3>
+                        <p id="skill-microservices-desc">Distributed Systems, Event-driven Architecture</p>
                     </div>
-                    <div class="skill-card">
+                    <div id="skill-spring-boot" class="skill-card">
                         <i class="fas fa-leaf" style="font-size: 3rem; color: var(--primary-color);"></i>
-                        <h3>Spring Boot</h3>
-                        <p>REST APIs, Spring Cloud, Spring Data</p>
+                        <h3 id="skill-spring-boot-title">Spring Boot</h3>
+                        <p id="skill-spring-boot-desc">REST APIs, Spring Cloud, Spring Data</p>
                     </div>
-                    <div class="skill-card">
+                    <div id="skill-django" class="skill-card">
                         <i class="fab fa-python" style="font-size: 3rem; color: var(--primary-color);"></i>
-                        <h3>Django</h3>
-                        <p>Web Applications, REST Framework</p>
+                        <h3 id="skill-django-title">Django</h3>
+                        <p id="skill-django-desc">Web Applications, REST Framework</p>
                     </div>
-                    <div class="skill-card">
+                    <div id="skill-graphql" class="skill-card">
                         <i class="fas fa-project-diagram" style="font-size: 3rem; color: var(--primary-color);"></i>
-                        <h3>GraphQL</h3>
-                        <p>API Design, Query Language, Schema</p>
+                        <h3 id="skill-graphql-title">GraphQL</h3>
+                        <p id="skill-graphql-desc">API Design, Query Language, Schema</p>
                     </div>
-                    <div class="skill-card">
+                    <div id="skill-aiml-frameworks" class="skill-card">
                         <i class="fas fa-brain" style="font-size: 3rem; color: var(--primary-color);"></i>
-                        <h3>AI/ML Frameworks</h3>
-                        <p>TensorFlow, PyTorch, Scikit-learn, Vertex AI</p>
+                        <h3 id="skill-aiml-frameworks-title">AI/ML Frameworks</h3>
+                        <p id="skill-aiml-frameworks-desc">TensorFlow, PyTorch, Scikit-learn, Vertex AI</p>
                     </div>
-                    <div class="skill-card">
+                    <div id="skill-llm-frameworks" class="skill-card">
                         <i class="fas fa-network-wired" style="font-size: 3rem; color: var(--primary-color);"></i>
-                        <h3>LLM Frameworks</h3>
-                        <p>LangChain, LlamaIndex, Hugging Face</p>
+                        <h3 id="skill-llm-frameworks-title">LLM Frameworks</h3>
+                        <p id="skill-llm-frameworks-desc">LangChain, LlamaIndex, Hugging Face</p>
                     </div>
                 </div>
             </div>
@@ -291,53 +291,53 @@
             <div id="hobbies-section" style="margin-top: 80px;">
                 <h2 id="hobbies-title" class="section-title">Hobbies & Interests</h2>
                 <div id="hobbies-intro" class="about-text" style="text-align: center; margin-bottom: 40px;">
-                    <p>Beyond technology, I pursue creative and adventurous activities that fuel my passion and perspective.</p>
+                    <p id="hobbies-intro-text">Beyond technology, I pursue creative and adventurous activities that fuel my passion and perspective.</p>
                 </div>
-                <div class="skills-grid">
-                    <div class="skill-card">
+                <div id="hobbies-grid" class="skills-grid">
+                    <div id="hobby-photography" class="skill-card">
                         <i class="fas fa-camera" style="font-size: 3rem; color: var(--primary-color);"></i>
-                        <h3>Photography</h3>
-                        <p>Capturing moments and exploring visual storytelling</p>
+                        <h3 id="hobby-photography-title">Photography</h3>
+                        <p id="hobby-photography-desc">Capturing moments and exploring visual storytelling</p>
                     </div>
-                    <div class="skill-card">
+                    <div id="hobby-motorcycling" class="skill-card">
                         <i class="fas fa-motorcycle" style="font-size: 3rem; color: var(--primary-color);"></i>
-                        <h3>Motorcycling</h3>
-                        <p>Long rides and exploring new destinations</p>
+                        <h3 id="hobby-motorcycling-title">Motorcycling</h3>
+                        <p id="hobby-motorcycling-desc">Long rides and exploring new destinations</p>
                     </div>
-                    <div class="skill-card">
+                    <div id="hobby-travelling" class="skill-card">
                         <i class="fas fa-plane" style="font-size: 3rem; color: var(--primary-color);"></i>
-                        <h3>Travelling</h3>
-                        <p>Discovering new cultures and experiences</p>
+                        <h3 id="hobby-travelling-title">Travelling</h3>
+                        <p id="hobby-travelling-desc">Discovering new cultures and experiences</p>
                     </div>
-                    <div class="skill-card">
+                    <div id="hobby-esports" class="skill-card">
                         <i class="fas fa-gamepad" style="font-size: 3rem; color: var(--primary-color);"></i>
-                        <h3>ESports</h3>
-                        <p>Competitive gaming and strategic gameplay</p>
+                        <h3 id="hobby-esports-title">ESports</h3>
+                        <p id="hobby-esports-desc">Competitive gaming and strategic gameplay</p>
                     </div>
-                    <div class="skill-card">
+                    <div id="hobby-aquascaping" class="skill-card">
                         <i class="fas fa-water" style="font-size: 3rem; color: var(--primary-color);"></i>
-                        <h3>Aquascaping</h3>
-                        <p>Designing planted aquariums with natural layouts</p>
+                        <h3 id="hobby-aquascaping-title">Aquascaping</h3>
+                        <p id="hobby-aquascaping-desc">Designing planted aquariums with natural layouts</p>
                     </div>
-                    <div class="skill-card">
+                    <div id="hobby-model-cars" class="skill-card">
                         <i class="fas fa-car-side" style="font-size: 3rem; color: var(--primary-color);"></i>
-                        <h3>Scale Model Car Collecting</h3>
-                        <p>Curating detailed miniature car models and displays</p>
+                        <h3 id="hobby-model-cars-title">Scale Model Car Collecting</h3>
+                        <p id="hobby-model-cars-desc">Curating detailed miniature car models and displays</p>
                     </div>
-                    <div class="skill-card">
+                    <div id="hobby-fishkeeping" class="skill-card">
                         <i class="fas fa-fish" style="font-size: 3rem; color: var(--primary-color);"></i>
-                        <h3>Fishkeeping</h3>
-                        <p>Maintaining healthy aquatic ecosystems and ornamental fish</p>
+                        <h3 id="hobby-fishkeeping-title">Fishkeeping</h3>
+                        <p id="hobby-fishkeeping-desc">Maintaining healthy aquatic ecosystems and ornamental fish</p>
                     </div>
-                    <div class="skill-card">
+                    <div id="hobby-gardening" class="skill-card">
                         <i class="fas fa-seedling" style="font-size: 3rem; color: var(--primary-color);"></i>
-                        <h3>Gardening</h3>
-                        <p>Growing and caring for plants in curated green spaces</p>
+                        <h3 id="hobby-gardening-title">Gardening</h3>
+                        <p id="hobby-gardening-desc">Growing and caring for plants in curated green spaces</p>
                     </div>
-                    <div class="skill-card">
+                    <div id="hobby-cultivation" class="skill-card">
                         <i class="fas fa-leaf" style="font-size: 3rem; color: var(--primary-color);"></i>
-                        <h3>Cultivation</h3>
-                        <p>Nurturing plant growth with attention to environment and care</p>
+                        <h3 id="hobby-cultivation-title">Cultivation</h3>
+                        <p id="hobby-cultivation-desc">Nurturing plant growth with attention to environment and care</p>
                     </div>
                 </div>
             </div>

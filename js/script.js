@@ -85,12 +85,19 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe all sections and cards
+// Observe all sections and cards - with mobile-friendly fallback
 document.querySelectorAll('section, .skill-card, .project-card, .stat').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
+    // Only apply animation on larger screens to avoid blank pages on mobile
+    if (window.innerWidth > 768) {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    } else {
+        // On mobile, ensure elements are visible immediately
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+    }
 });
 
 // ===== Contact Form Handling =====

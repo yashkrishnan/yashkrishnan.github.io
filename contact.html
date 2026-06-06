@@ -245,13 +245,14 @@
 
         // Handle Stack Overflow flair loading
         const soFlairImg = document.getElementById('stackoverflow-flair-img');
+        const soFlairLink = document.getElementById('stackoverflow-flair-link');
         const soPlaceholder = document.getElementById('stackoverflow-placeholder');
         
-        if (soFlairImg && soPlaceholder) {
+        if (soFlairImg && soFlairLink && soPlaceholder) {
             soFlairImg.addEventListener('load', function() {
-                // Hide placeholder and show actual flair
+                // Hide placeholder and show actual flair link
                 soPlaceholder.style.display = 'none';
-                soFlairImg.style.display = 'block';
+                soFlairLink.style.display = 'inline-block';
             });
             
             soFlairImg.addEventListener('error', function() {

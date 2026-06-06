@@ -909,6 +909,17 @@ section {
         transition: var(--transition);
     }
 
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 15px 20px;
+        margin: -15px -20px;
+    }
+
     .nav-links.active {
         left: 0;
     }

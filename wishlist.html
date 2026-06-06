@@ -260,9 +260,9 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <ul class="nav-links">
+    <nav id="wishlist-navigation" class="navbar">
+        <div id="wishlist-nav-container" class="container">
+            <ul id="wishlist-nav-menu" class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="experience.html">Experience</a></li>
@@ -271,7 +271,7 @@
                 <li><a href="education.html">Education</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="hamburger">
+            <div id="wishlist-hamburger" class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -280,51 +280,51 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="wishlist-hero">
-        <div class="container">
-            <h1><i class="fas fa-heart"></i> My Wishlist</h1>
-            <p>Curated collection of products I love and recommend. These are items I've researched, tested, or aspire to own.</p>
+    <section id="wishlist-hero-section" class="wishlist-hero">
+        <div id="wishlist-hero-container" class="container">
+            <h1 id="wishlist-hero-title"><i class="fas fa-heart"></i> My Wishlist</h1>
+            <p id="wishlist-hero-subtitle">Curated collection of products I love and recommend. These are items I've researched, tested, or aspire to own.</p>
         </div>
     </section>
 
     <!-- Stats Section -->
-    <section class="about">
-        <div class="container">
-            <div class="stats-section">
-                <div class="stat-item">
-                    <div class="stat-number" id="totalProducts">24</div>
-                    <div class="stat-label">Total Products</div>
+    <section id="stats-section" class="about">
+        <div id="stats-container" class="container">
+            <div id="stats-display" class="stats-section">
+                <div id="stat-total" class="stat-item">
+                    <div id="totalProducts" class="stat-number">24</div>
+                    <div id="stat-total-label" class="stat-label">Total Products</div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number" id="totalCategories">6</div>
-                    <div class="stat-label">Categories</div>
+                <div id="stat-categories" class="stat-item">
+                    <div id="totalCategories" class="stat-number">6</div>
+                    <div id="stat-categories-label" class="stat-label">Categories</div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number" id="wishlistedItems">18</div>
-                    <div class="stat-label">Wishlisted</div>
+                <div id="stat-wishlisted" class="stat-item">
+                    <div id="wishlistedItems" class="stat-number">18</div>
+                    <div id="stat-wishlisted-label" class="stat-label">Wishlisted</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Controls Section -->
-    <section class="controls-section">
-        <div class="container">
-            <div class="controls-container">
-                <div class="search-box">
+    <section id="controls-section" class="controls-section">
+        <div id="controls-container" class="container">
+            <div id="controls-wrapper" class="controls-container">
+                <div id="search-box" class="search-box">
                     <input type="text" id="searchInput" placeholder="Search products...">
                     <i class="fas fa-search"></i>
                 </div>
-                <div class="filter-group">
-                    <button class="filter-btn active" data-category="all">All</button>
-                    <button class="filter-btn" data-category="electronics">Electronics</button>
-                    <button class="filter-btn" data-category="books">Books</button>
-                    <button class="filter-btn" data-category="gadgets">Gadgets</button>
-                    <button class="filter-btn" data-category="fashion">Fashion</button>
-                    <button class="filter-btn" data-category="home">Home & Living</button>
+                <div id="filter-group" class="filter-group">
+                    <button id="filter-all" class="filter-btn active" data-category="all">All</button>
+                    <button id="filter-electronics" class="filter-btn" data-category="electronics">Electronics</button>
+                    <button id="filter-books" class="filter-btn" data-category="books">Books</button>
+                    <button id="filter-gadgets" class="filter-btn" data-category="gadgets">Gadgets</button>
+                    <button id="filter-fashion" class="filter-btn" data-category="fashion">Fashion</button>
+                    <button id="filter-home" class="filter-btn" data-category="home">Home & Living</button>
                 </div>
-                <div class="sort-dropdown">
-                    <button class="sort-btn" id="sortBtn">
+                <div id="sort-dropdown" class="sort-dropdown">
+                    <button id="sortBtn" class="sort-btn">
                         <i class="fas fa-sort"></i> Sort by: <span id="sortLabel">Date Added</span>
                     </button>
                 </div>
@@ -333,19 +333,19 @@
     </section>
 
     <!-- Products Grid -->
-    <section class="about">
-        <div class="container">
-            <div class="products-grid" id="productsGrid">
+    <section id="products-section" class="about">
+        <div id="products-container" class="container">
+            <div id="productsGrid" class="products-grid">
                 <!-- Product cards will be dynamically generated -->
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; <span data-current-year>2024</span> Yashwanth Krishnan. All rights reserved.</p>
-            <p>Built with <i class="fas fa-heart"></i> and passion</p>
+    <footer id="wishlist-footer" class="footer">
+        <div id="wishlist-footer-container" class="container">
+            <p id="wishlist-footer-copyright">&copy; <span data-current-year>2024</span> Yashwanth Krishnan. All rights reserved.</p>
+            <p id="wishlist-footer-tagline">Built with <i id="wishlist-footer-heart" class="fas fa-heart"></i> and passion</p>
         </div>
     </footer>
 

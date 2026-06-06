@@ -357,9 +357,9 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <ul class="nav-links">
+    <nav id="blog-navigation" class="navbar">
+        <div id="blog-nav-container" class="container">
+            <ul id="blog-nav-menu" class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="experience.html">Experience</a></li>
@@ -368,7 +368,7 @@
                 <li><a href="education.html">Education</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="hamburger">
+            <div id="blog-hamburger" class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -377,20 +377,20 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="blog-hero">
-        <div class="container">
-            <h1><i class="fas fa-blog"></i> Blog</h1>
-            <p>Thoughts on technology, software engineering, and continuous learning</p>
+    <section id="blog-hero-section" class="blog-hero">
+        <div id="blog-hero-container" class="container">
+            <h1 id="blog-hero-title"><i class="fas fa-blog"></i> Blog</h1>
+            <p id="blog-hero-subtitle">Thoughts on technology, software engineering, and continuous learning</p>
         </div>
     </section>
 
     <!-- Newsletter Section -->
-    <section class="about">
-        <div class="container">
-            <div class="newsletter-section">
-                <h3><i class="fas fa-envelope"></i> Subscribe to Newsletter</h3>
-                <p>Get the latest articles delivered straight to your inbox</p>
-                <form class="newsletter-form" id="newsletterForm">
+    <section id="newsletter-section" class="about">
+        <div id="newsletter-container" class="container">
+            <div id="newsletter-card" class="newsletter-section">
+                <h3 id="newsletter-title"><i class="fas fa-envelope"></i> Subscribe to Newsletter</h3>
+                <p id="newsletter-description">Get the latest articles delivered straight to your inbox</p>
+                <form id="newsletterForm" class="newsletter-form">
                     <input type="email" placeholder="Enter your email" required>
                     <button type="submit">Subscribe</button>
                 </form>
@@ -399,27 +399,27 @@
     </section>
 
     <!-- Featured Post -->
-    <section class="about">
-        <div class="container">
-            <div class="featured-section">
-                <h2><i class="fas fa-star"></i> Featured Post</h2>
-                <div class="featured-post">
-                    <div class="featured-image">
+    <section id="featured-section" class="about">
+        <div id="featured-container" class="container">
+            <div id="featured-wrapper" class="featured-section">
+                <h2 id="featured-heading"><i class="fas fa-star"></i> Featured Post</h2>
+                <div id="featured-post" class="featured-post">
+                    <div id="featured-image" class="featured-image">
                         <i class="fas fa-rocket"></i>
                     </div>
-                    <div class="featured-content">
-                        <span class="post-source source-native">Native</span>
-                        <h3>Building Scalable Microservices with Kubernetes</h3>
-                        <div class="post-meta">
-                            <span class="meta-item"><i class="far fa-calendar"></i> Jan 15, 2024</span>
-                            <span class="meta-item"><i class="far fa-clock"></i> 8 min read</span>
-                            <span class="meta-item"><i class="far fa-user"></i> Yashwanth Krishnan</span>
+                    <div id="featured-content" class="featured-content">
+                        <span id="featured-source" class="post-source source-native">Native</span>
+                        <h3 id="featured-title">Building Scalable Microservices with Kubernetes</h3>
+                        <div id="featured-meta" class="post-meta">
+                            <span id="featured-date" class="meta-item"><i class="far fa-calendar"></i> Jan 15, 2024</span>
+                            <span id="featured-read-time" class="meta-item"><i class="far fa-clock"></i> 8 min read</span>
+                            <span id="featured-author" class="meta-item"><i class="far fa-user"></i> Yashwanth Krishnan</span>
                         </div>
-                        <p class="featured-excerpt">
+                        <p id="featured-excerpt" class="featured-excerpt">
                             Deep dive into building production-ready microservices architecture using Kubernetes, 
                             covering service mesh, observability, and best practices learned from real-world implementations.
                         </p>
-                        <a href="#" class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" id="featured-link" class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -427,24 +427,24 @@
     </section>
 
     <!-- Blog Controls -->
-    <section class="about">
-        <div class="container">
-            <div class="blog-controls">
-                <div class="search-bar">
+    <section id="blog-controls-section" class="about">
+        <div id="blog-controls-container" class="container">
+            <div id="blog-controls" class="blog-controls">
+                <div id="search-bar" class="search-bar">
                     <input type="text" id="searchInput" placeholder="Search articles...">
                     <i class="fas fa-search"></i>
                 </div>
-                <div class="filter-tabs">
-                    <button class="filter-tab active" data-source="all">
+                <div id="filter-tabs" class="filter-tabs">
+                    <button id="filter-all" class="filter-tab active" data-source="all">
                         <i class="fas fa-globe"></i> All Posts
                     </button>
-                    <button class="filter-tab" data-source="native">
+                    <button id="filter-native" class="filter-tab" data-source="native">
                         <i class="fas fa-home"></i> Native
                     </button>
-                    <button class="filter-tab" data-source="substack">
+                    <button id="filter-substack" class="filter-tab" data-source="substack">
                         <i class="fab fa-substack"></i> Substack
                     </button>
-                    <button class="filter-tab" data-source="medium">
+                    <button id="filter-medium" class="filter-tab" data-source="medium">
                         <i class="fab fa-medium"></i> Medium
                     </button>
                 </div>
@@ -453,26 +453,26 @@
     </section>
 
     <!-- Blog Grid -->
-    <section class="about">
-        <div class="container">
+    <section id="blog-grid-section" class="about">
+        <div id="blog-grid-container" class="container">
             <div id="loadingIndicator" class="loading" style="display: none;">
                 <i class="fas fa-spinner"></i>
                 <p>Loading articles...</p>
             </div>
-            <div class="blog-grid" id="blogGrid">
+            <div id="blogGrid" class="blog-grid">
                 <!-- Blog cards will be dynamically generated -->
             </div>
-            <div class="pagination" id="pagination">
+            <div id="pagination" class="pagination">
                 <!-- Pagination buttons will be dynamically generated -->
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; <span data-current-year>2024</span> Yashwanth Krishnan. All rights reserved.</p>
-            <p>Built with <i class="fas fa-heart"></i> and passion</p>
+    <footer id="blog-footer" class="footer">
+        <div id="blog-footer-container" class="container">
+            <p id="blog-footer-copyright">&copy; <span data-current-year>2024</span> Yashwanth Krishnan. All rights reserved.</p>
+            <p id="blog-footer-tagline">Built with <i id="blog-footer-heart" class="fas fa-heart"></i> and passion</p>
         </div>
     </footer>
 

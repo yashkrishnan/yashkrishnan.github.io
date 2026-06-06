@@ -197,9 +197,9 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <ul class="nav-links">
+    <nav id="social-navigation" class="navbar">
+        <div id="social-nav-container" class="container">
+            <ul id="social-nav-menu" class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="experience.html">Experience</a></li>
@@ -208,7 +208,7 @@
                 <li><a href="education.html">Education</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="hamburger">
+            <div id="social-hamburger" class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -217,33 +217,33 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="social-hero">
-        <div class="container">
-            <h1>Social Media Hub</h1>
-            <p>Stay connected across all platforms</p>
+    <section id="social-hero-section" class="social-hero">
+        <div id="social-hero-container" class="container">
+            <h1 id="social-hero-title">Social Media Hub</h1>
+            <p id="social-hero-subtitle">Stay connected across all platforms</p>
         </div>
     </section>
 
     <!-- Filter Tabs -->
-    <section class="about">
-        <div class="container">
-            <div class="filter-tabs">
-                <button class="filter-tab active" data-filter="all">
+    <section id="filter-section" class="about">
+        <div id="filter-container" class="container">
+            <div id="filter-tabs" class="filter-tabs">
+                <button id="filter-all" class="filter-tab active" data-filter="all">
                     <i class="fas fa-globe"></i> All Posts
                 </button>
-                <button class="filter-tab" data-filter="instagram">
+                <button id="filter-instagram" class="filter-tab" data-filter="instagram">
                     <i class="fab fa-instagram"></i> Instagram
                 </button>
-                <button class="filter-tab" data-filter="linkedin">
+                <button id="filter-linkedin" class="filter-tab" data-filter="linkedin">
                     <i class="fab fa-linkedin"></i> LinkedIn
                 </button>
-                <button class="filter-tab" data-filter="twitter">
+                <button id="filter-twitter" class="filter-tab" data-filter="twitter">
                     <i class="fab fa-twitter"></i> X/Twitter
                 </button>
-                <button class="filter-tab" data-filter="reddit">
+                <button id="filter-reddit" class="filter-tab" data-filter="reddit">
                     <i class="fab fa-reddit"></i> Reddit
                 </button>
-                <button class="filter-tab" data-filter="facebook">
+                <button id="filter-facebook" class="filter-tab" data-filter="facebook">
                     <i class="fab fa-facebook"></i> Facebook
                 </button>
             </div>
@@ -251,152 +251,152 @@
     </section>
 
     <!-- Social Posts Grid -->
-    <section class="about">
-        <div class="container">
+    <section id="posts-section" class="about">
+        <div id="posts-container" class="container">
             <div class="social-grid" id="socialGrid">
                 <!-- Instagram Reel -->
-                <div class="social-post" data-platform="instagram" data-timestamp="1704067200">
-                    <div class="post-header">
-                        <div class="platform-icon instagram">
+                <div id="post-instagram-1" class="social-post" data-platform="instagram" data-timestamp="1704067200">
+                    <div id="post-instagram-1-header" class="post-header">
+                        <div id="post-instagram-1-icon" class="platform-icon instagram">
                             <i class="fab fa-instagram"></i>
                         </div>
-                        <div class="post-meta">
-                            <div class="post-platform">Instagram</div>
-                            <div class="post-timestamp">2 days ago</div>
+                        <div id="post-instagram-1-meta" class="post-meta">
+                            <div id="post-instagram-1-platform" class="post-platform">Instagram</div>
+                            <div id="post-instagram-1-timestamp" class="post-timestamp">2 days ago</div>
                         </div>
                     </div>
-                    <div class="post-media">
-                        <div class="play-button">
+                    <div id="post-instagram-1-media" class="post-media">
+                        <div id="post-instagram-1-play" class="play-button">
                             <i class="fas fa-play"></i>
                         </div>
                         <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
                             <i class="fas fa-video"></i>
                         </div>
                     </div>
-                    <div class="post-content">
-                        <p class="post-text">Check out my latest tech insights! 🚀 #TechLife #Engineering</p>
-                        <div class="post-engagement">
+                    <div id="post-instagram-1-content" class="post-content">
+                        <p id="post-instagram-1-text" class="post-text">Check out my latest tech insights! 🚀 #TechLife #Engineering</p>
+                        <div id="post-instagram-1-engagement" class="post-engagement">
                             <span class="engagement-item"><i class="fas fa-heart"></i> 1.2K</span>
                             <span class="engagement-item"><i class="fas fa-comment"></i> 45</span>
                             <span class="engagement-item"><i class="fas fa-share"></i> 23</span>
                         </div>
-                        <a href="#" class="post-link">View on Instagram <i class="fas fa-external-link-alt"></i></a>
+                        <a href="#" id="post-instagram-1-link" class="post-link">View on Instagram <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
 
                 <!-- LinkedIn Post -->
-                <div class="social-post" data-platform="linkedin" data-timestamp="1704153600">
-                    <div class="post-header">
-                        <div class="platform-icon linkedin">
+                <div id="post-linkedin-1" class="social-post" data-platform="linkedin" data-timestamp="1704153600">
+                    <div id="post-linkedin-1-header" class="post-header">
+                        <div id="post-linkedin-1-icon" class="platform-icon linkedin">
                             <i class="fab fa-linkedin"></i>
                         </div>
-                        <div class="post-meta">
-                            <div class="post-platform">LinkedIn</div>
-                            <div class="post-timestamp">1 day ago</div>
+                        <div id="post-linkedin-1-meta" class="post-meta">
+                            <div id="post-linkedin-1-platform" class="post-platform">LinkedIn</div>
+                            <div id="post-linkedin-1-timestamp" class="post-timestamp">1 day ago</div>
                         </div>
                     </div>
-                    <div class="post-content">
-                        <p class="post-text">Excited to share insights on building scalable microservices architecture. Key takeaways from my recent project at IBM watsonx.data...</p>
-                        <div class="post-engagement">
+                    <div id="post-linkedin-1-content" class="post-content">
+                        <p id="post-linkedin-1-text" class="post-text">Excited to share insights on building scalable microservices architecture. Key takeaways from my recent project at IBM watsonx.data...</p>
+                        <div id="post-linkedin-1-engagement" class="post-engagement">
                             <span class="engagement-item"><i class="fas fa-thumbs-up"></i> 342</span>
                             <span class="engagement-item"><i class="fas fa-comment"></i> 28</span>
                             <span class="engagement-item"><i class="fas fa-share"></i> 15</span>
                         </div>
-                        <a href="#" class="post-link">View on LinkedIn <i class="fas fa-external-link-alt"></i></a>
+                        <a href="#" id="post-linkedin-1-link" class="post-link">View on LinkedIn <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
 
                 <!-- Twitter/X Post -->
-                <div class="social-post" data-platform="twitter" data-timestamp="1704240000">
-                    <div class="post-header">
-                        <div class="platform-icon twitter">
+                <div id="post-twitter-1" class="social-post" data-platform="twitter" data-timestamp="1704240000">
+                    <div id="post-twitter-1-header" class="post-header">
+                        <div id="post-twitter-1-icon" class="platform-icon twitter">
                             <i class="fab fa-twitter"></i>
                         </div>
-                        <div class="post-meta">
-                            <div class="post-platform">X (Twitter)</div>
-                            <div class="post-timestamp">12 hours ago</div>
+                        <div id="post-twitter-1-meta" class="post-meta">
+                            <div id="post-twitter-1-platform" class="post-platform">X (Twitter)</div>
+                            <div id="post-twitter-1-timestamp" class="post-timestamp">12 hours ago</div>
                         </div>
                     </div>
-                    <div class="post-content">
-                        <p class="post-text">Just deployed a new feature using Kubernetes and OpenTelemetry. The observability improvements are game-changing! 🎯 #DevOps #CloudNative</p>
-                        <div class="post-engagement">
+                    <div id="post-twitter-1-content" class="post-content">
+                        <p id="post-twitter-1-text" class="post-text">Just deployed a new feature using Kubernetes and OpenTelemetry. The observability improvements are game-changing! 🎯 #DevOps #CloudNative</p>
+                        <div id="post-twitter-1-engagement" class="post-engagement">
                             <span class="engagement-item"><i class="fas fa-heart"></i> 567</span>
                             <span class="engagement-item"><i class="fas fa-retweet"></i> 89</span>
                             <span class="engagement-item"><i class="fas fa-comment"></i> 34</span>
                         </div>
-                        <a href="#" class="post-link">View on X <i class="fas fa-external-link-alt"></i></a>
+                        <a href="#" id="post-twitter-1-link" class="post-link">View on X <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
 
                 <!-- Instagram Image -->
-                <div class="social-post" data-platform="instagram" data-timestamp="1703980800">
-                    <div class="post-header">
-                        <div class="platform-icon instagram">
+                <div id="post-instagram-2" class="social-post" data-platform="instagram" data-timestamp="1703980800">
+                    <div id="post-instagram-2-header" class="post-header">
+                        <div id="post-instagram-2-icon" class="platform-icon instagram">
                             <i class="fab fa-instagram"></i>
                         </div>
-                        <div class="post-meta">
-                            <div class="post-platform">Instagram</div>
-                            <div class="post-timestamp">3 days ago</div>
+                        <div id="post-instagram-2-meta" class="post-meta">
+                            <div id="post-instagram-2-platform" class="post-platform">Instagram</div>
+                            <div id="post-instagram-2-timestamp" class="post-timestamp">3 days ago</div>
                         </div>
                     </div>
-                    <div class="post-media">
+                    <div id="post-instagram-2-media" class="post-media">
                         <div style="background: linear-gradient(135deg, #0f62fe 0%, #0353e9 100%); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
                             <i class="fas fa-image"></i>
                         </div>
                     </div>
-                    <div class="post-content">
-                        <p class="post-text">Office setup for maximum productivity 💻 #WorkFromHome #TechSetup</p>
-                        <div class="post-engagement">
+                    <div id="post-instagram-2-content" class="post-content">
+                        <p id="post-instagram-2-text" class="post-text">Office setup for maximum productivity 💻 #WorkFromHome #TechSetup</p>
+                        <div id="post-instagram-2-engagement" class="post-engagement">
                             <span class="engagement-item"><i class="fas fa-heart"></i> 892</span>
                             <span class="engagement-item"><i class="fas fa-comment"></i> 31</span>
                             <span class="engagement-item"><i class="fas fa-share"></i> 12</span>
                         </div>
-                        <a href="#" class="post-link">View on Instagram <i class="fas fa-external-link-alt"></i></a>
+                        <a href="#" id="post-instagram-2-link" class="post-link">View on Instagram <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
 
                 <!-- Reddit Post -->
-                <div class="social-post" data-platform="reddit" data-timestamp="1704326400">
-                    <div class="post-header">
-                        <div class="platform-icon reddit">
+                <div id="post-reddit-1" class="social-post" data-platform="reddit" data-timestamp="1704326400">
+                    <div id="post-reddit-1-header" class="post-header">
+                        <div id="post-reddit-1-icon" class="platform-icon reddit">
                             <i class="fab fa-reddit"></i>
                         </div>
-                        <div class="post-meta">
-                            <div class="post-platform">Reddit</div>
-                            <div class="post-timestamp">6 hours ago</div>
+                        <div id="post-reddit-1-meta" class="post-meta">
+                            <div id="post-reddit-1-platform" class="post-platform">Reddit</div>
+                            <div id="post-reddit-1-timestamp" class="post-timestamp">6 hours ago</div>
                         </div>
                     </div>
-                    <div class="post-content">
-                        <p class="post-text"><strong>r/programming</strong> - Best practices for implementing distributed tracing in microservices</p>
-                        <p class="post-text" style="margin-top: 10px;">After working with OpenTelemetry for the past year, here are my top recommendations...</p>
-                        <div class="post-engagement">
+                    <div id="post-reddit-1-content" class="post-content">
+                        <p id="post-reddit-1-text-1" class="post-text"><strong>r/programming</strong> - Best practices for implementing distributed tracing in microservices</p>
+                        <p id="post-reddit-1-text-2" class="post-text" style="margin-top: 10px;">After working with OpenTelemetry for the past year, here are my top recommendations...</p>
+                        <div id="post-reddit-1-engagement" class="post-engagement">
                             <span class="engagement-item"><i class="fas fa-arrow-up"></i> 234</span>
                             <span class="engagement-item"><i class="fas fa-comment"></i> 67</span>
                             <span class="engagement-item"><i class="fas fa-share"></i> 19</span>
                         </div>
-                        <a href="#" class="post-link">View on Reddit <i class="fas fa-external-link-alt"></i></a>
+                        <a href="#" id="post-reddit-1-link" class="post-link">View on Reddit <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
 
                 <!-- Facebook Post -->
-                <div class="social-post" data-platform="facebook" data-timestamp="1703894400">
-                    <div class="post-header">
-                        <div class="platform-icon facebook">
+                <div id="post-facebook-1" class="social-post" data-platform="facebook" data-timestamp="1703894400">
+                    <div id="post-facebook-1-header" class="post-header">
+                        <div id="post-facebook-1-icon" class="platform-icon facebook">
                             <i class="fab fa-facebook"></i>
                         </div>
-                        <div class="post-meta">
-                            <div class="post-platform">Facebook</div>
-                            <div class="post-timestamp">4 days ago</div>
+                        <div id="post-facebook-1-meta" class="post-meta">
+                            <div id="post-facebook-1-platform" class="post-platform">Facebook</div>
+                            <div id="post-facebook-1-timestamp" class="post-timestamp">4 days ago</div>
                         </div>
                     </div>
-                    <div class="post-content">
-                        <p class="post-text">Grateful for the amazing team at IBM! Working on cutting-edge data platform technology has been an incredible journey. 🚀</p>
-                        <div class="post-engagement">
+                    <div id="post-facebook-1-content" class="post-content">
+                        <p id="post-facebook-1-text" class="post-text">Grateful for the amazing team at IBM! Working on cutting-edge data platform technology has been an incredible journey. 🚀</p>
+                        <div id="post-facebook-1-engagement" class="post-engagement">
                             <span class="engagement-item"><i class="fas fa-thumbs-up"></i> 156</span>
                             <span class="engagement-item"><i class="fas fa-comment"></i> 23</span>
                             <span class="engagement-item"><i class="fas fa-share"></i> 8</span>
                         </div>
-                        <a href="#" class="post-link">View on Facebook <i class="fas fa-external-link-alt"></i></a>
+                        <a href="#" id="post-facebook-1-link" class="post-link">View on Facebook <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
             </div>
@@ -404,10 +404,10 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; <span data-current-year>2024</span> Yashwanth Krishnan. All rights reserved.</p>
-            <p>Built with <i class="fas fa-heart"></i> and passion</p>
+    <footer id="social-footer" class="footer">
+        <div id="social-footer-container" class="container">
+            <p id="social-footer-copyright">&copy; <span data-current-year>2024</span> Yashwanth Krishnan. All rights reserved.</p>
+            <p id="social-footer-tagline">Built with <i id="social-footer-heart" class="fas fa-heart"></i> and passion</p>
         </div>
     </footer>
 

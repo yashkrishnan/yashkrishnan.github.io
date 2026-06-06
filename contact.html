@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Tags: Character encoding and viewport settings for responsive design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contact - Yashwanth Krishnan">
     <title>Contact - Yashwanth Krishnan</title>
+    
+    <!-- Favicon: SVG format for scalability -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <!-- IBM Plex Fonts -->
+    
+    <!-- IBM Plex Fonts: Professional typography from Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets: Custom styles and Font Awesome icons -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- ============================================
+         NAVIGATION BAR
+         Main navigation menu with responsive hamburger
+         ============================================ -->
     <nav id="main-navigation" class="navbar">
         <div id="nav-container" class="container">
             <ul id="nav-menu" class="nav-links">
@@ -34,7 +43,10 @@
         </div>
     </nav>
 
-    <!-- Contact Section -->
+    <!-- ============================================
+         CONTACT SECTION
+         Professional profiles and contact information
+         ============================================ -->
     <section id="contact-section" class="contact" style="padding-top: 120px; min-height: calc(100vh - 200px);">
         <div id="contact-container" class="container">
             <h2 id="contact-title" class="section-title">Get In Touch</h2>
@@ -42,7 +54,7 @@
                 <p id="contact-intro-text">I'm always open to discussing new opportunities, collaborations, or just having a chat about technology.</p>
             </div>
             
-            <!-- Professional Profiles Header -->
+            <!-- Professional Profiles Header: Introduction to profile cards -->
             <div id="profiles-header" style="max-width: 1200px; margin: 0 auto; text-align: center; margin-bottom: 30px;">
                 <h3 id="profiles-title" style="font-size: 1.8rem; margin-bottom: 10px; color: #ffffff;">Professional Profiles</h3>
                 <p id="profiles-description" style="color: #f0f0f0; line-height: 1.6;">
@@ -50,10 +62,13 @@
                 </p>
             </div>
 
-            <!-- 3-Column Profile Layout -->
+            <!-- 3-Column Profile Layout: Responsive grid for LinkedIn, GitHub, and Stack Overflow -->
             <div id="profiles-grid" style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
                 
-                <!-- LinkedIn Profile Card -->
+                <!-- ========================================
+                     LINKEDIN PROFILE CARD
+                     Professional network and career updates
+                     ======================================== -->
                 <div id="linkedin-profile-card" style="background: var(--card-bg); padding: 25px; border: 1px solid var(--ui-03); border-radius: 8px; text-align: center; display: flex; flex-direction: column;">
                     <div id="linkedin-icon" style="font-size: 2.5rem; color: #0077b5; margin-bottom: 15px;">
                         <i class="fab fa-linkedin"></i>
@@ -63,7 +78,7 @@
                         Professional network and career updates
                     </p>
                     
-                    <!-- LinkedIn Badge Widget -->
+                    <!-- LinkedIn Badge Widget: Custom badge matching platform branding -->
                     <div id="linkedin-badge" style="margin-bottom: 20px; min-height: 70px; display: flex; align-items: center; justify-content: center;">
                         <a id="linkedin-badge-link" href="https://www.linkedin.com/in/yashkrishnan/" target="_blank" style="text-decoration: none;">
                             <div id="linkedin-badge-content" style="background: white; border: 1px solid #e0e0e0; border-radius: 6px; padding: 12px 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: inline-flex; align-items: center; gap: 12px; min-width: 200px; height: 58px;">
@@ -78,6 +93,7 @@
                         </a>
                     </div>
                     
+                    <!-- LinkedIn Profile Button: Direct link to full profile -->
                     <a id="linkedin-profile-button" href="https://www.linkedin.com/in/yashkrishnan/"
                        target="_blank"
                        style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: #0077b5; color: white; text-decoration: none; font-weight: 600; border-radius: 6px; font-size: 0.9rem; transition: background 0.3s ease; margin-top: auto;"
@@ -88,7 +104,10 @@
                     </a>
                 </div>
 
-                <!-- GitHub Profile Card -->
+                <!-- ========================================
+                     GITHUB PROFILE CARD
+                     Open source contributions and projects
+                     ======================================== -->
                 <div id="github-profile-card" style="background: var(--card-bg); padding: 25px; border: 1px solid var(--ui-03); border-radius: 8px; text-align: center; display: flex; flex-direction: column;">
                     <div id="github-icon" style="font-size: 2.5rem; color: #333; margin-bottom: 15px;">
                         <i class="fab fa-github"></i>
@@ -98,7 +117,7 @@
                         Open source contributions and projects
                     </p>
                     
-                    <!-- GitHub Badge Widget -->
+                    <!-- GitHub Badge Widget: Custom badge matching platform branding -->
                     <div id="github-badge" style="margin-bottom: 20px; min-height: 70px; display: flex; align-items: center; justify-content: center;">
                         <a id="github-badge-link" href="https://github.com/yashkrishnan" target="_blank" style="text-decoration: none;">
                             <div id="github-badge-content" style="background: white; border: 1px solid #e0e0e0; border-radius: 6px; padding: 12px 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: inline-flex; align-items: center; gap: 12px; min-width: 200px; height: 58px;">
@@ -113,6 +132,7 @@
                         </a>
                     </div>
                     
+                    <!-- GitHub Profile Button: Direct link to full profile -->
                     <a id="github-profile-button" href="https://github.com/yashkrishnan"
                        target="_blank"
                        style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: #333; color: white; text-decoration: none; font-weight: 600; border-radius: 6px; font-size: 0.9rem; transition: background 0.3s ease; margin-top: auto;"
@@ -123,7 +143,10 @@
                     </a>
                 </div>
 
-                <!-- Stack Overflow Profile Card -->
+                <!-- ========================================
+                     STACK OVERFLOW PROFILE CARD
+                     Community contributions and reputation
+                     ======================================== -->
                 <div id="stackoverflow-profile-card" style="background: var(--card-bg); padding: 25px; border: 1px solid var(--ui-03); border-radius: 8px; text-align: center; display: flex; flex-direction: column;">
                     <div id="stackoverflow-icon" style="font-size: 2.5rem; color: #F48024; margin-bottom: 15px;">
                         <i class="fab fa-stack-overflow"></i>
@@ -133,9 +156,9 @@
                         Helping developers solve challenges
                     </p>
                     
-                    <!-- Stack Overflow Flair -->
+                    <!-- Stack Overflow Flair: Dynamic loading with placeholder -->
                     <div id="stackoverflow-flair" style="margin-bottom: 20px; min-height: 70px; display: flex; align-items: center; justify-content: center;">
-                        <!-- Placeholder badge (shown while flair loads) -->
+                        <!-- Placeholder Badge: Displays immediately while actual flair loads from external source -->
                         <a id="stackoverflow-placeholder" href="https://stackoverflow.com/users/2604735/yash-krishnan" target="_blank" style="text-decoration: none;">
                             <div style="background: white; border: 1px solid #e0e0e0; border-radius: 6px; padding: 12px 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: inline-flex; align-items: center; gap: 12px; min-width: 200px; height: 58px;">
                                 <div style="font-size: 2rem; color: #F48024;">
@@ -147,7 +170,7 @@
                                 </div>
                             </div>
                         </a>
-                        <!-- Actual Stack Overflow flair (hidden initially) -->
+                        <!-- Actual Stack Overflow Flair: Hidden initially, shown after image loads successfully -->
                         <a id="stackoverflow-flair-link" href="https://stackoverflow.com/users/2604735/yash-krishnan" target="_blank" style="display: none;">
                             <img id="stackoverflow-flair-img"
                                  src="https://stackoverflow.com/users/flair/2604735.png?theme=clean"
@@ -161,6 +184,7 @@
                         </a>
                     </div>
                     
+                    <!-- Stack Overflow Profile Button: Direct link to full profile -->
                     <a id="stackoverflow-profile-button" href="https://stackoverflow.com/users/2604735/yash-krishnan"
                        target="_blank"
                        style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: #F48024; color: white; text-decoration: none; font-weight: 600; border-radius: 6px; font-size: 0.9rem; transition: background 0.3s ease; margin-top: auto;"
@@ -175,7 +199,10 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ============================================
+         FOOTER
+         Copyright and branding information
+         ============================================ -->
     <footer id="main-footer" class="footer">
         <div id="footer-container" class="container">
             <p id="footer-copyright">&copy; <span data-current-year>2024</span> Yashwanth Krishnan. All rights reserved.</p>
@@ -183,42 +210,59 @@
         </div>
     </footer>
 
+    <!-- External Scripts: Main JavaScript functionality -->
     <script src="js/script.js"></script>
+    
+    <!-- ============================================
+         INLINE SCRIPTS
+         Page-specific JavaScript functionality
+         ============================================ -->
     <script>
-        // Contact form handling
+        // ========================================
+        // CONTACT FORM HANDLING
+        // Processes form submission and opens email client
+        // ========================================
         document.getElementById('contactForm').addEventListener('submit', function(e) {
+            // Prevent default form submission
             e.preventDefault();
             
+            // Get form elements and values
             const formMessage = document.getElementById('formMessage');
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
             
-            // Create mailto link
+            // Create mailto link with encoded parameters
             const mailtoLink = `mailto:yashwanthkrishnan@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
             
-            // Open email client
+            // Open default email client with pre-filled information
             window.location.href = mailtoLink;
             
-            // Show success message
+            // Display success message with styling
             formMessage.style.display = 'block';
             formMessage.style.background = '#d4edda';
             formMessage.style.color = '#155724';
             formMessage.style.border = '1px solid #c3e6cb';
             formMessage.innerHTML = '<i class="fas fa-check-circle"></i> Your email client should open. If not, please email directly to yashwanthkrishnan@gmail.com';
             
-            // Reset form
+            // Clear form fields after submission
             this.reset();
         });
 
-        // Add hover effects to social links
+        // ========================================
+        // SOCIAL LINKS HOVER EFFECTS
+        // Adds interactive hover animations to social media links
+        // ========================================
         document.querySelectorAll('a[href*="linkedin"], a[href*="github"], a[href*="mailto"]').forEach(link => {
+            // Only apply to icon-sized links (50px width)
             if (link.style.width === '50px') {
+                // Mouse enter: Lift effect and color change
                 link.addEventListener('mouseenter', function() {
                     this.style.transform = 'translateY(-3px)';
                     this.style.background = '#0353e9';
                 });
+                // Mouse leave: Reset to original state
                 link.addEventListener('mouseleave', function() {
                     this.style.transform = 'translateY(0)';
                     this.style.background = 'var(--primary-color)';
@@ -226,37 +270,54 @@
             }
         });
 
-        // Add hover effects to contact info cards
+        // ========================================
+        // CONTACT INFO CARDS HOVER EFFECTS
+        // Adds interactive hover animations to profile cards
+        // ========================================
         document.querySelectorAll('.contact-info-card').forEach(card => {
+            // Mouse enter: Slide right and enhance shadow
             card.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateX(5px)';
                 this.style.boxShadow = '0 4px 12px rgba(15, 98, 254, 0.15)';
             });
+            // Mouse leave: Reset to original position and shadow
             card.addEventListener('mouseleave', function() {
                 this.style.transform = 'translateX(0)';
                 this.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
             });
         });
 
-        // Add transition to contact info cards
+        // ========================================
+        // CONTACT INFO CARDS TRANSITIONS
+        // Applies smooth CSS transitions to all profile cards
+        // ========================================
         document.querySelectorAll('.contact-info-card').forEach(card => {
             card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
         });
 
-        // Handle Stack Overflow flair loading
+        // ========================================
+        // STACK OVERFLOW FLAIR LOADING
+        // Manages dynamic loading and display of Stack Overflow flair
+        // Shows placeholder badge while flair loads, then swaps to actual flair
+        // ========================================
+        // Get references to flair elements
         const soFlairImg = document.getElementById('stackoverflow-flair-img');
         const soFlairLink = document.getElementById('stackoverflow-flair-link');
         const soPlaceholder = document.getElementById('stackoverflow-placeholder');
         
+        // Ensure all elements exist before adding event listeners
         if (soFlairImg && soFlairLink && soPlaceholder) {
+            // Image load event: Swap placeholder with actual flair
             soFlairImg.addEventListener('load', function() {
-                // Hide placeholder and show actual flair link
+                // Hide placeholder badge
                 soPlaceholder.style.display = 'none';
+                // Show actual Stack Overflow flair
                 soFlairLink.style.display = 'inline-block';
             });
             
+            // Image error event: Handle loading failures gracefully
             soFlairImg.addEventListener('error', function() {
-                // If flair fails to load, keep showing placeholder
+                // Keep placeholder visible if external flair fails to load
                 console.log('Stack Overflow flair failed to load, showing placeholder');
             });
         }

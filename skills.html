@@ -15,9 +15,9 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav id="main-navigation" class="navbar">
         <div class="container">
-            <ul class="nav-links">
+            <ul id="nav-menu" class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="experience.html">Experience</a></li>
@@ -35,17 +35,17 @@
     </nav>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills" style="padding-top: 120px;">
+    <section id="skills-section" class="skills" style="padding-top: 120px;">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="about-text" style="text-align: center; margin-bottom: 40px;">
+            <h2 id="skills-title" class="section-title">Technical Skills</h2>
+            <div id="skills-intro" class="about-text" style="text-align: center; margin-bottom: 40px;">
                 <p>Comprehensive technical expertise across programming languages, frameworks, cloud platforms, and modern development tools.</p>
             </div>
 
             <!-- Programming Languages -->
-            <div style="margin-bottom: 50px;">
-                <h3 style="font-size: 1.5rem; margin-bottom: 25px; color: var(--primary-color); text-align: center;">Programming Languages</h3>
-                <div class="skills-grid">
+            <div id="programming-languages-section" style="margin-bottom: 50px;">
+                <h3 id="programming-languages-title" style="font-size: 1.5rem; margin-bottom: 25px; color: var(--primary-color); text-align: center;">Programming Languages</h3>
+                <div id="programming-languages-grid" class="skills-grid">
                     <div class="skill-card">
                         <i class="fab fa-java" style="font-size: 3rem; color: var(--primary-color);"></i>
                         <h3>Java</h3>
@@ -70,9 +70,9 @@
             </div>
 
             <!-- AI/ML & Data Science -->
-            <div style="margin-bottom: 50px;">
-                <h3 style="font-size: 1.5rem; margin-bottom: 25px; color: var(--primary-color); text-align: center;">AI/ML & Data Science</h3>
-                <div class="skills-grid">
+            <div id="aiml-section" style="margin-bottom: 50px;">
+                <h3 id="aiml-title" style="font-size: 1.5rem; margin-bottom: 25px; color: var(--primary-color); text-align: center;">AI/ML & Data Science</h3>
+                <div id="aiml-grid" class="skills-grid">
                     <div class="skill-card">
                         <i class="fas fa-brain" style="font-size: 3rem; color: var(--primary-color);"></i>
                         <h3>NLP</h3>
@@ -102,9 +102,9 @@
             </div>
 
             <!-- Frameworks & Architecture -->
-            <div style="margin-bottom: 50px;">
-                <h3 style="font-size: 1.5rem; margin-bottom: 25px; color: var(--primary-color); text-align: center;">Frameworks & Architecture</h3>
-                <div class="skills-grid">
+            <div id="frameworks-section" style="margin-bottom: 50px;">
+                <h3 id="frameworks-title" style="font-size: 1.5rem; margin-bottom: 25px; color: var(--primary-color); text-align: center;">Frameworks & Architecture</h3>
+                <div id="frameworks-grid" class="skills-grid">
                     <div class="skill-card">
                         <i class="fas fa-project-diagram" style="font-size: 3rem; color: var(--primary-color);"></i>
                         <h3>Microservices</h3>
@@ -139,9 +139,9 @@
             </div>
 
             <!-- Observability & Monitoring -->
-            <div style="margin-bottom: 50px;">
-                <h3 style="font-size: 1.5rem; margin-bottom: 25px; color: var(--primary-color); text-align: center;">Observability & Monitoring</h3>
-                <div class="skills-grid">
+            <div id="observability-section" style="margin-bottom: 50px;">
+                <h3 id="observability-title" style="font-size: 1.5rem; margin-bottom: 25px; color: var(--primary-color); text-align: center;">Observability & Monitoring</h3>
+                <div id="observability-grid" class="skills-grid">
                     <div class="skill-card">
                         <i class="fas fa-chart-area" style="font-size: 3rem; color: var(--primary-color);"></i>
                         <h3>Grafana & Prometheus</h3>
@@ -176,9 +176,9 @@
             </div>
 
             <!-- Cloud & DevOps -->
-            <div style="margin-bottom: 50px;">
-                <h3 style="font-size: 1.5rem; margin-bottom: 25px; color: var(--primary-color); text-align: center;">Cloud & DevOps</h3>
-                <div class="skills-grid">
+            <div id="cloud-devops-section" style="margin-bottom: 50px;">
+                <h3 id="cloud-devops-title" style="font-size: 1.5rem; margin-bottom: 25px; color: var(--primary-color); text-align: center;">Cloud & DevOps</h3>
+                <div id="cloud-devops-grid" class="skills-grid">
                     <div class="skill-card">
                         <i class="fab fa-aws" style="font-size: 3rem; color: var(--primary-color);"></i>
                         <h3>AWS</h3>
@@ -213,9 +213,9 @@
             </div>
 
             <!-- Databases & Data Engineering -->
-            <div style="margin-bottom: 50px;">
-                <h3 style="font-size: 1.5rem; margin-bottom: 25px; color: var(--primary-color); text-align: center;">Databases & Data Engineering</h3>
-                <div class="skills-grid">
+            <div id="databases-section" style="margin-bottom: 50px;">
+                <h3 id="databases-title" style="font-size: 1.5rem; margin-bottom: 25px; color: var(--primary-color); text-align: center;">Databases & Data Engineering</h3>
+                <div id="databases-grid" class="skills-grid">
                     <div class="skill-card">
                         <i class="fas fa-database" style="font-size: 3rem; color: var(--primary-color);"></i>
                         <h3>NoSQL Databases</h3>
@@ -250,9 +250,9 @@
             </div>
 
             <!-- Messaging & Integration -->
-            <div style="margin-bottom: 50px;">
-                <h3 style="font-size: 1.5rem; margin-bottom: 25px; color: var(--primary-color); text-align: center;">Messaging & Integration</h3>
-                <div class="skills-grid">
+            <div id="messaging-section" style="margin-bottom: 50px;">
+                <h3 id="messaging-title" style="font-size: 1.5rem; margin-bottom: 25px; color: var(--primary-color); text-align: center;">Messaging & Integration</h3>
+                <div id="messaging-grid" class="skills-grid">
                     <div class="skill-card">
                         <i class="fas fa-stream" style="font-size: 3rem; color: var(--primary-color);"></i>
                         <h3>Apache Kafka</h3>
@@ -288,9 +288,9 @@
 
 
             <!-- Hobbies & Interests -->
-            <div style="margin-top: 80px;">
-                <h2 class="section-title">Hobbies & Interests</h2>
-                <div class="about-text" style="text-align: center; margin-bottom: 40px;">
+            <div id="hobbies-section" style="margin-top: 80px;">
+                <h2 id="hobbies-title" class="section-title">Hobbies & Interests</h2>
+                <div id="hobbies-intro" class="about-text" style="text-align: center; margin-bottom: 40px;">
                     <p>Beyond technology, I pursue creative and adventurous activities that fuel my passion and perspective.</p>
                 </div>
                 <div class="skills-grid">
@@ -345,10 +345,10 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; <span data-current-year>2024</span> Yashwanth Krishnan. All rights reserved.</p>
-            <p>Built with <i class="fas fa-heart"></i> and passion</p>
+    <footer id="main-footer" class="footer">
+        <div id="footer-container" class="container">
+            <p id="footer-copyright">&copy; <span data-current-year>2024</span> Yashwanth Krishnan. All rights reserved.</p>
+            <p id="footer-tagline">Built with <i id="footer-heart-icon" class="fas fa-heart"></i> and passion</p>
         </div>
     </footer>
 
